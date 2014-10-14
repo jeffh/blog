@@ -1,0 +1,77 @@
+# -*- coding: utf-8 -*-
+#: settings for liquidluck
+
+#: site information
+#: all variables can be accessed in template with ``site`` namespace.
+#: for instance: {{site.name}}
+site:
+    name: Jeff Hui
+    url: "https://www.jeffhui.net/"
+    # "prefix": "blog",
+
+#: this config defined information of your site
+#: 1. where the resources  2. how should the site be generated
+config:
+    source: content
+    output: deploy
+    static: deploy/static
+    static_prefix: /static/
+    permalink: "{{date.year}}/{{filename}}.html"
+    relative_url: false
+    perpage: 30
+    feedcount: 20
+    timezone: "+08:00"
+
+
+author:
+    default: Jeff Hui
+    vars:
+        # key: value
+
+#: active readers
+reader:
+    active:
+        - liquidluck.readers.markdown.MarkdownReader
+        # uncomment to activate rST reader
+        #- liquidluck.readers.restructuredtext.RestructuredTextReader
+    vars:
+        # key: value
+
+#: active writers
+writer:
+    active:
+        - liquidluck.writers.core.PostWriter
+        - liquidluck.writers.core.PageWriter
+        - liquidluck.writers.core.ArchiveWriter
+        - liquidluck.writers.core.ArchiveFeedWriter
+        - liquidluck.writers.core.FileWriter
+        - liquidluck.writers.core.StaticWriter
+        - liquidluck.writers.core.YearWriter
+        # - liquidluck.writers.core.CategoryWriter
+        # - liquidluck.writers.core.CategoryFeedWriter
+        - liquidluck.writers.core.TagWriter
+        - liquidluck.writers.core.TagCloudWriter
+    vars:
+        # uncomment if you want to reset archive page
+        # archive_output: archive.html
+
+#: theme variables
+theme:
+    name: jeffh_moment # default
+
+    # theme variables are defined by theme creator
+    # you can access theme in template with ``theme`` namespace
+    # for instance: {{theme.disqus}}
+    vars:
+        analytics: "UA-2212222-7"
+        navigation:
+            - {title: "jeffhui.net", link: "/"}
+            - {title: "gh/jeffh", link: "https://github.com/jeffh"}
+            - {title: "@jeffhui", link: "https://twitter.com/jeffhui"}
+
+#: template variables
+template:
+    vars:
+        # key: value
+    filters:
+        # key: value
