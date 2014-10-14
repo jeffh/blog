@@ -24,9 +24,12 @@ config:
 
 
 author:
-    default: Jeff Hui
+    default: jeff
     vars:
-        # key: value
+        jeff:
+            name: Jeff Hui
+            email: 'jeff@jeffhui.net'
+
 
 #: active readers
 reader:
