@@ -14,7 +14,7 @@ contain when they're needed (or right before they're needed).
 What can you do with lazy data structures? How about a page-scraper that
 paginates as needed:
 
-```
+```ruby
 // pseudocode
 seed_url = "http://example.com/page/"
 // generate a lazy list of urls:
