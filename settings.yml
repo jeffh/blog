@@ -60,7 +60,7 @@ writer:
 
 #: theme variables
 theme:
-    name: jeffh_moment # default
+    name: jeffh # default
 
     # theme variables are defined by theme creator
     # you can access theme in template with ``theme`` namespace
