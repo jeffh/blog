@@ -48,7 +48,7 @@ abstraction](http://clojure.org/sequences) in Objective-C. Clojure's Sequences
 are based on LISP's famous linked list, converted to an interface that provides
 uniform api for a wide range of data structures in Clojure. It's simple:
 
-```
+```objc
 @protocol Sequence <NSObject>
 - (id)firstObject; // clojure: (first seq); nil indicates end
 - (id<Sequence>)remainingSequence; // clojure: (rest seq)
@@ -69,7 +69,7 @@ complicated to implement as it sounds. Here's a näive implementation based on
 the Clojure's [Java
 implementation](https://github.com/clojure/clojure/blob/master/src/jvm/clojure/lang/LazySeq.java):
 
-```
+```objc
 // LazySequence.h
 @interface LazySequence : NSObject <Sequence>
 // clojure equivalent to (lazy-seq (block))
@@ -141,7 +141,7 @@ have some interesting characteristics:
 But lazy, higher-ordered functions (``map``, ``filter``, ``reduce``, etc.) can
 be implemented from this:
 
-```
+```objc
 id<Sequence> filterSequence(id<Sequence> seq, BOOL(^filter)(id value)) {
     if (![seq firstObject]) {
         return [ConcreteSequence emptySequence];
