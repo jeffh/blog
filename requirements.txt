@@ -2,7 +2,7 @@ Fabric==1.10.0
 Jinja2==2.7.3
 MarkupSafe==0.23
 PyYAML==3.11
-Pygments==1.6
+Pygments==2.0rc1
 backports.ssl-match-hostname==3.4.0.2
 certifi==14.05.14
 docopt==0.6.2

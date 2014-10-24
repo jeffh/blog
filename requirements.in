@@ -1,3 +1,5 @@
 liquidluck
 tornado
 fabric
+
+pygments>=2.0rc1
