@@ -50,7 +50,7 @@ writer:
         - liquidluck.writers.core.FileWriter
         - liquidluck.writers.core.StaticWriter
         - liquidluck.writers.core.YearWriter
-        # - liquidluck.writers.core.CategoryWriter
+        - liquidluck.writers.core.CategoryWriter
         # - liquidluck.writers.core.CategoryFeedWriter
         - liquidluck.writers.core.TagWriter
         - liquidluck.writers.core.TagCloudWriter
