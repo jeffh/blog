@@ -5,7 +5,7 @@
 
 ----------------------------------------
 
-*This post was original written on the [Pivotal Labs Blog](http://pivotallabs.com/parsing-json-in-objective-c)*
+*This post was original written on the [Pivotal Labs Blog](http://pivotallabs.com/parsing-json-in-objective-c).*
 
 JSON parsing is a frequent task for clients interfacing with any recent web API. Those web services frequently vary in quality:
 
@@ -488,4 +488,4 @@ Finished in 0.1168 seconds
 ```
 
 # In the Next Episode ...
-If this was in an application, this could be enough. In the next article in this series, we'll talk about how to redesign the code to increase its code reuse.
+If this was in an application, this could be enough. In the next article, we'll talk about how to redesign the code to increase its code reuse.
