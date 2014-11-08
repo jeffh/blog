@@ -1,4 +1,4 @@
-# Parsing JSON in Objective-C
+# Parsing JSON in Objective-C - Part 1
 
 - date: 2014-10-24
 - tags: objective-c, tdd, series: Parsing JSON in Objective-C
@@ -488,4 +488,4 @@ Finished in 0.1168 seconds
 ```
 
 # In the Next Episode ...
-If this was in an application, this could be enough. In the next article, we'll talk about how to redesign the code to increase its code reuse.
+If this was in an application, this could be enough. In the next article, we'll talk about [how to redesign the code to increase its code reuse](06-parsing-json-in-objective-c-part-2).
