@@ -1,5 +1,6 @@
 liquidluck
 tornado
 fabric
+awscli
 
 pygments>=2.0rc1
