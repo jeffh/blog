@@ -2,3 +2,4 @@ deploy
 *.py[co]
 .DS_Store
 .ropeproject
+drafts
