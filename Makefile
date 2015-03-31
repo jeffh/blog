@@ -4,3 +4,5 @@ run: build
 build:
 	liquidluck build
 
+clean:
+	rm -rf deploy
