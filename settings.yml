@@ -69,8 +69,8 @@ theme:
         analytics: "UA-2212222-7"
         navigation:
             - {title: "jeffhui.net", link: "/"}
-            - {title: "gh/jeffh", link: "https://github.com/jeffh"}
-            - {title: "@jeffhui", link: "https://twitter.com/jeffhui"}
+            - {title: "github/jeffh", link: "https://github.com/jeffh"}
+            - {title: "twitter/jeffhui", link: "https://twitter.com/jeffhui"}
 
 #: template variables
 template:
