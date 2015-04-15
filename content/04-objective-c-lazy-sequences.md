@@ -15,24 +15,24 @@ What can you do with lazy data structures? How about a page-scraper that
 paginates as needed:
 
 ```ruby
-// pseudocode
+# pseudocode
 seed_url = "http://example.com/page/"
-// generate a lazy list of urls:
-// - http://example.com/page/1
-// - http://example.com/page/2
-// - etc.
+# generate a lazy list of urls:
+# - http://example.com/page/1
+# - http://example.com/page/2
+# - etc.
 urls = lazy {
     for (i = 0; i < 100; i++) {
         yield seed_url + string(i)
     }
 }
-// a lazy list of html pages
+# a lazy list of html pages
 pages = map(urls, fetchURLPageContents)
-// a lazy list of list of links
+# a lazy list of list of links
 links_per_page = map(pages, extractLinksFromHTML)
-// flatten to just a lazy list of links
+# flatten to just a lazy list of links
 links = join(links_per_page)
-// do stuff with links
+# do stuff with links
 for link in links {
     record(link)
 }
