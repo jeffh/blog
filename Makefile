@@ -7,5 +7,5 @@ build:
 clean:
 	rm -rf deploy
 
-upload:
-	aws s3 sync --storage-class REDUCED_REDUNDANCY deploy/ s3://www.jeffhui.net/
+deploy: clean build
+	aws s3 sync --storage-class REDUCED_REDUNDANCY deploy s3://www.jeffhui.net/
