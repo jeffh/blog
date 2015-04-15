@@ -89,6 +89,9 @@
   margin: 0 0 1.64em -24px;
   color: #666664;
 }
+.yue blockquote strong {
+  color: #444442;
+}
 .yue ul,
 .yue ol {
   margin: 0 0 24px 6px;

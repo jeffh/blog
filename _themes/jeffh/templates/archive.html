@@ -17,8 +17,8 @@
     </h3>
     {%- endif %}
     <div class="entry-item">
-        <time class="updated" datetime="{{item.date|xmldatetime}}">{{item.date.strftime('%b %e')}}</time>
         <a href="{{item|permalink}}">{{item.title}}</a>
+        <time class="updated" datetime="{{item.date|xmldatetime}}">{{item.date.strftime('%b %e')}}</time>
     </div>
     {% endfor %}
 </div>

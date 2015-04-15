@@ -133,20 +133,30 @@ a:hover {
   content: "#";
 }
 .entry-item {
-  margin: 12px 0;
+  margin: 11px 0;
   zoom: 1;
+  font-size: 105%;
 }
 .entry-item a {
-  margin: 0.2em 1em;
+  margin: 0.0em 1em;
+  margin-left: 0.2em;
+  margin-right: 0.3em;
+  text-decoration: none;
+  border-bottom: 1px solid #999;
 }
 .entry-item .updated {
   font-family: "PT Sans", sans-serif;
 }
 .entry-item-title {
   margin-top: 24px;
+  border-bottom: 1px solid #ddd;
+  text-align: right;
 }
 .entry-item-title a {
   margin-left: 0;
+  text-decoration: none;
+  color: #555;
+  font-family: "Rosario", sans-serif;
 }
 
 .pagination {
