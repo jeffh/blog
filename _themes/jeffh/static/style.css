@@ -4,6 +4,7 @@
 html, body {
   padding: 0;
   margin: 0;
+  background: #f1f1f1;
 }
 
 /* extra */
@@ -41,7 +42,6 @@ a:hover {
   font-size: 16px;
   font-family: "Optima", "Avenir", "Helvetica Neue", sans-serif;
   padding: 20px 10px;
-  background: #f1f1f1;
   border-bottom: 2px solid #e1e1e1;
 }
 #brand {
@@ -63,7 +63,7 @@ a:hover {
   text-decoration: none;
 }
 #nav a:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 #nav select {
   margin-top: 8px;
@@ -78,6 +78,12 @@ a:hover {
     top: 0;
     right: 10px;
   }
+}
+
+.main-content {
+  background: #fff;
+  height: 100%;
+  border-bottom: 2px solid #e1e1e1;
 }
 
 #main {

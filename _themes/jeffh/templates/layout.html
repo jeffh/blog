@@ -46,28 +46,30 @@
       </div>
     </header>
 
-    <div id="main">
-      <div class="container yue">
-        {%- block main %}
-        {% endblock -%}
+    <div class="main-content">
+      <div id="main">
+        <div class="container yue">
+          {%- block main %}
+          {% endblock -%}
+        </div>
       </div>
-    </div>
 
-    <footer id="footer">
-      {%- block footer %}
-      <div class="end"></div>
-      {% if theme.elsewhere -%}
-      <nav class="elsewhere">
-        {% for item in theme.elsewhere -%}
-        <a href="{{item.link}}">{{item.name}}</a>
-        {%- endfor %}
-      </nav>
-      {%- endif %}
-      <p class="copyright">
-      &copy; 2015 Jeff Hui
-      </p>
-      {%- endblock %}
-    </footer>
+      <footer id="footer">
+        {%- block footer %}
+        <div class="end"></div>
+        {% if theme.elsewhere -%}
+        <nav class="elsewhere">
+          {% for item in theme.elsewhere -%}
+          <a href="{{item.link}}">{{item.name}}</a>
+          {%- endfor %}
+        </nav>
+        {%- endif %}
+        <p class="copyright">
+          &copy; 2015 Jeff Hui
+        </p>
+        {%- endblock %}
+      </footer>
+    </div>
 
     {%- block beforejs %}{% endblock %}
     <script type="text/javascript" src="{{ static_url('mobile.js') }}"></script>
