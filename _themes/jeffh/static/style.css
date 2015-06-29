@@ -149,6 +149,10 @@ a:hover {
   zoom: 1;
   font-size: 105%;
 }
+.entry-content img {
+	margin: 0 -130px 0 -130px;
+	max-width: 960px;
+}
 .entry-item a {
   margin: 0.0em 1em;
   margin-left: 0.2em;
