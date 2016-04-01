@@ -104,7 +104,7 @@ Here's a list of editors and their storage mechanisms:
 - [Atom](https://atom.io "Github Atom") uses [Array of Strings](https://github.com/atom/text-buffer/blob/master/src/text-buffer.coffee)
 - [Visual Studio Code](https://code.visualstudio.com/ "Microsoft Visual Studio Code") uses [Array of Strings](https://github.com/Microsoft/vscode/blob/90eed31518ac40f9b038d85952e6320f79a51dc3/src/vs/editor/common/model/textModel.ts)
 - [Brackets](http://brackets.io/ "Adobe Brackets") uses [Array of Strings](https://github.com/codemirror/CodeMirror/blob/master/lib/codemirror.js#L7256-L7260) via [CodeMirror](https://codemirror.net/)
-- [Vim](http://www.vim.org/) represents [text as an Array of Strings](https://github.com/vim/vim/blob/master/src/memline.c) using an internal tree data structure, similar to [Rope](https://en.wikipedia.org/wiki/Rope_(data_structure)), but leaf nodes holding lines when possible.
+- [Vim](http://www.vim.org/) represents [text as an Array of Strings](https://github.com/vim/vim/blob/master/src/memline.c) using an internal tree data structure, similar to [Rope][1], but leaf nodes holding lines when possible.
 - [Emacs](https://www.gnu.org/software/emacs/) uses [Gap Buffers](https://www.gnu.org/software/emacs/manual/html_node/elisp/Buffer-Gap.html).
 - [Eclipse](https://eclipse.org/) uses [Gap Buffers](https://github.com/eclipse/eclipse.platform.text/blob/master/org.eclipse.text/src/org/eclipse/jface/text/GapTextStore.java).
 
@@ -114,3 +114,5 @@ Other Data Structures that need to be elaborated on:
 - Piece table (preferred by many commercial "editors" like Word).
 
 Comments, questions, corrections? Tweet me at [@jeffhui][https://twitter.com/jeffhui].
+
+[1]: https://en.wikipedia.org/wiki/Rope_(data_structure)
