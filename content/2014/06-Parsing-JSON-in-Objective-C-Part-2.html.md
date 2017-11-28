@@ -2,6 +2,7 @@
 
 - date: 2014-11-08
 - tags: objective-c, tdd, series: Parsing JSON in Objective-C
+- url_postfix: .html
 
 --------------------------------------
 

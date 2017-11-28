@@ -1,6 +1,7 @@
 # What's Your Engineering Culture?
 
 - date: 2016-07-31
+- url_postfix: .html
 
 ------------------------------
 

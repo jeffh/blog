@@ -2,6 +2,7 @@
 
 - date: 2014-7-24
 - tags: philosophy
+- url_postfix: .html
 
 -----------------
 

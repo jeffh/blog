@@ -16,7 +16,7 @@ config:
     output: deploy
     static: deploy/static
     static_prefix: /static/
-    permalink: "{{date.year}}/{{filename}}.html"
+    permalink: "{{folder}}/{{filename}}"
     relative_url: false
     perpage: 30
     feedcount: 20
@@ -26,9 +26,9 @@ config:
 author:
     default: jeff
     vars:
-        jeff:
-            name: Jeff Hui
-            email: 'jeff@jeffhui.net'
+      jeff:
+        name: Jeff Hui
+        email: 'jeff@jeffhui.net'
 
 
 #: active readers

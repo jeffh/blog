@@ -2,6 +2,7 @@
 
 - date: 2014-7-25
 - tags: algorithms, binary-search, ios, objective-c
+- url_postfix: .html
 
 ---------------------
 

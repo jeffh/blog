@@ -1,6 +1,7 @@
 # Observation
 
 - date: 2016-2-29
+- url_postfix: .html
 
 ----------------------------
 

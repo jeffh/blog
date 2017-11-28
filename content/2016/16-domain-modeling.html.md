@@ -1,6 +1,7 @@
 # Modeling the Domain
 
 - date: 2016-1-31
+- url_postfix: .html
 
 -------------------------------
 

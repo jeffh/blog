@@ -1,6 +1,7 @@
 # Daily Processes Check-In
 
 - date: 2015-11-30
+- url_postfix: .html
 
 ----------------------------------------------
 

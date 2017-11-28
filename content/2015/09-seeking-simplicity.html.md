@@ -2,6 +2,7 @@
 
 - date: 2015-05-03
 - tags: clojure, javascript, swift, software-design
+- url_postfix: .html
 
 --------------------------------------
 

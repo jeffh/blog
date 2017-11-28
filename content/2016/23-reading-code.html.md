@@ -1,6 +1,7 @@
 # Reading Code – Assertions & Assumptions
 
 - date: 2016-08-31
+- url_postfix: .html
 
 ------------------------------------------
 

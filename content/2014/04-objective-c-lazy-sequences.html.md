@@ -2,6 +2,7 @@
 
 - date: 2014-8-7
 - tags: objective-c, clojure, lazy-sequences
+- url_postfix: .html
 
 ----------------------------------------
 

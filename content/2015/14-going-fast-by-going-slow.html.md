@@ -1,6 +1,7 @@
 # Going Fast by Going Slow
 
 - date: 2015-10-31
+- url_postfix: .html
 
 --------------------------------------------------------
 

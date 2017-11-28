@@ -1,6 +1,7 @@
 # Design of Software Solutions
 
 - date: 2016-04-30
+- url_postfix: .html
 
 ----------
 

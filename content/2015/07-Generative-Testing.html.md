@@ -2,6 +2,7 @@
 
 - date: 2015-01-31
 - tags: objective-c, tdd, fox, quickcheck
+- url_postfix: .html
 
 --------------------------------------
 

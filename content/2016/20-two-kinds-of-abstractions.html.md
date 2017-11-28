@@ -1,6 +1,7 @@
 # Two Kinds of Abstractions
 
 - date: 2016-05-31
+- url_postfix: .html
 
 ------------------------------
 

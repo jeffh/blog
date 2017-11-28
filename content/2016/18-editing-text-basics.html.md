@@ -1,6 +1,7 @@
 # Editing Text (Basics)
 
 - date: 2016-03-31
+- url_postfix: .html
 
 ---------
 
