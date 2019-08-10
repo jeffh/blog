@@ -4,3 +4,4 @@ fabric
 awscli
 
 pygments>=2.0rc1
+misaka==1.0.2

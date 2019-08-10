@@ -21,7 +21,7 @@ div.end {
   border: 0 none;
   height: 10px;
   text-align: center;
-  background: url("end.png") no-repeat 50% 50%;
+  /* background: url("end.png") no-repeat 50% 50%; */
 }
 
 .container {
@@ -79,6 +79,12 @@ a:hover {
 #nav select {
   margin-top: 8px;
   font-size: 16px;
+  padding: 4px;
+  text-decoration: underline;
+  text-align-last: right;
+}
+#nav option {
+  direction: rtl;
 }
 @media (max-width: 480px) {
   #brand a {
@@ -86,9 +92,10 @@ a:hover {
   }
   #nav {
     position: absolute;
-    top: 0;
+    top: 10px;
     right: 10px;
   }
+  #nav::after { content: "\2630"; }
 }
 
 .main-content {
@@ -157,7 +164,6 @@ a:hover {
 .entry-item {
   margin: 7px 0;
   zoom: 1;
-  font-size: 130%;
 }
 .entry-content img {
   margin-left: auto;
@@ -245,4 +251,19 @@ a:hover {
 }
 #disqus_thread {
   margin-top: 50px;
+}
+
+@media only screen and (max-width: 500px) {
+	.entry-item .updated { font-size: 11px; width: 40px; margin-left: 0; }
+	.entry-item a { font-size: 14px }
+	.hentry .entry-title { font-size: 1.5em; line-height: 1.25em; }
+	.entry-meta { margin-top: 10px }
+}
+
+@media only screen and (max-width: 400px) {
+	.entry-item .updated { font-size: 10px; width: 40px }
+	.entry-item a { font-size: 12px; width: auto; margin: 0 }
+	.hentry .entry-title { font-size: 1em; line-height: 1.25em; }
+	.entry-meta { margin-top: 10px }
+	#main { padding: 10px 10px; }
 }

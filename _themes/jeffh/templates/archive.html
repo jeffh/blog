@@ -14,10 +14,10 @@
 {% block main %}
 <div class="hentry"> <h1 class="entry-title">Writings</h1> </div>
 <div class="entry-list">
-    {% set year = 0 -%}
+    {% set prev = {'year': 0} -%}
     {% for item in pagination.items %}
-    {%- if item.date.year != year %}
-    {% set year = item.date.year -%}
+    {%- if item.date.year != prev.year %}
+    {% if prev.update({'year': item.date.year}) %}{% endif %}
     <h3 class="entry-item-title">
       <a href="{{item|year_url}}">{{item.date.year}}</a>
     </h3>
