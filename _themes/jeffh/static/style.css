@@ -170,6 +170,9 @@ a:hover {
   margin-right: auto;
   display: block;
 }
+.entry-content blockquote {
+	margin-left: 0;
+}
 .footnotes {
   border-top: 1px solid #ccc;
   padding: 1em 0.5em 0 0.5em;
@@ -266,4 +269,16 @@ a:hover {
 	.hentry .entry-title { font-size: 1em; line-height: 1.25em; }
 	.entry-meta { margin-top: 10px }
 	#main { padding: 10px 10px; }
+}
+
+/* Post Styles */
+
+.center {
+	text-align: center;
+	display: block;
+	margin: auto;
+}
+
+.lit {
+	box-shadow: 0 1px 15px #999
 }
