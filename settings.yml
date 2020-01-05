@@ -70,7 +70,7 @@ theme:
         navigation:
             - {title: "about", link: "/about"}
             - {title: "writings", link: "/"}
-            - {title: "micro", link: "https://jeffh.micro.blog"}
+            - {title: "micro", link: "https://jeffh.micro.blog", rel: "me"}
             - {title: "github", link: "https://github.com/jeffh"}
         about_links:
             - {title: "twitter", link: "https://twitter.com/jeffhui"}

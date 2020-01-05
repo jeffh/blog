@@ -44,7 +44,7 @@
         {%- block nav %}
         <nav id="nav" role="navigation">
           {% for item in theme.navigation %}
-          <a href="{{item.link}}">{{item.title}}</a>
+          <a href="{{item.link}}"{%- if item.rel %} rel="{{item.rel}}"{%- endif %}>{{item.title}}</a>
           {%- endfor %}
         </nav>
         {%- endblock %}
