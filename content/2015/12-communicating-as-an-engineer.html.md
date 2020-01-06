@@ -42,12 +42,12 @@ Talking to someone is similar to writing, it's best to anticipate the journey in
 
 And this varies from day-to-day. Sometimes it feels like everyone's on the same page, while others days feel like non-stop back-and-forth. But that's collaboration in action: a never-ending effort to piece together the sub-problems to provide a more comprehensive solution. It's how the sum becomes greater than its parts.
 
-<div class="footnotes">
-<a class="footnote" id="1">1:</a><p>A simple metric for meetings: is it worth the cost of having each person in the meeting room for the discussion for an hour? Consultants notice this more acutely than other types because of their hourly billing. It's useful, but should be more sparingly employed.</p>
-<a class="footnote" id="2">2:</a><p>Unless if you're a 1-person company, then only maybe. It's hard to believe if anyone has perfect technology.</p>
-<a class="footnote" id="3">3:</a><p>Optimization definitely has it's place, but make sure you need to pay that. If you imagine the business paying $60/hr for your time, it's it worth it for the business to improve that page load time by 10ms?</p>
-<a class="footnote" id="4">4:</a><p>Like optimizations, technologies are a tradeoff that should be considered. They may provide benefits as the increased risk. Can you deliver on the deadline? Can you recruit skill for this technology? What if the technology becomes abandoned?</p>
-<a class="footnote" id="5">5:</a><p>It's harder for a business stakeholder to be an expert at everything needed to run a business. It's easier for you to better understand the business than a stakeholder to understand technology, negotiation, manufacturing, recruiting, human resources. It doesn't hurt to try an educate them when you can though.</p>
-<a class="footnote" id="6">6:</a><p>Mistakes will always happen, that's just human nature.</p>
-</div>
+<ol class="footnotes">
+<li class="footnote" id="1">A simple metric for meetings: is it worth the cost of having each person in the meeting room for the discussion for an hour? Consultants notice this more acutely than other types because of their hourly billing. It's useful, but should be more sparingly employed. <a href="#1-back" class="back">&larrhk;</a></li>
+<li class="footnote" id="2">Unless if you're a 1-person company, then only maybe. It's hard to believe if anyone has perfect technology. <a href="#2-back" class="back">&larrhk;</a></li>
+<li class="footnote" id="3">Optimization definitely has it's place, but make sure you need to pay that. If you imagine the business paying $60/hr for your time, it's it worth it for the business to improve that page load time by 10ms? <a href="#3-back" class="back">&larrhk;</a></li>
+<li class="footnote" id="4">Like optimizations, technologies are a tradeoff that should be considered. They may provide benefits as the increased risk. Can you deliver on the deadline? Can you recruit skill for this technology? What if the technology becomes abandoned? <a href="#4-back" class="back">&larrhk;</a></li>
+<li class="footnote" id="5">It's harder for a business stakeholder to be an expert at everything needed to run a business. It's easier for you to better understand the business than a stakeholder to understand technology, negotiation, manufacturing, recruiting, human resources. It doesn't hurt to try an educate them when you can though. <a href="#5-back" class="back">&larrhk;</a></li>
+<li class="footnote" id="6">Mistakes will always happen, that's just human nature. <a href="#6-back" class="back">&larrhk;</a></li>
+</ol>
 

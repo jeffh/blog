@@ -16,10 +16,10 @@ allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 allowfullscreen></iframe>
 </p>
 
-In short, John makes a case: dynamically generating state machines detect
-errors that is better than traditional example based tests. There's lots of
-work managing example based tests that can be better solved with generative
-testing.
+In short, John makes a case: dynamically generating state machines to detect
+errors that is more effective and economical than traditional example based
+tests. There's lots of work managing example based tests that can be better
+solved with generative testing.
 
 While I doubt John wants to completely replace example-based tests, it seems
 like that example-based tests should be relegated to smaller roles in a test
@@ -27,8 +27,7 @@ suite:
 
  - Ensuring no regression of a bug occurs again, or ensuring specific
    happy-path case is *always* tested.
- - Testing pure functions (arguably, normal generative testing can solve this
-   too)
+ - Testing pure functions (arguably, normal generative testing can help too)
 
 With the most common argument against generating testing comes with the
 complexity of writing generative tests, or more specifically:
@@ -41,7 +40,7 @@ machine that basically implements the same behavior again?
 John's example in the video attempts to show the difference: that a production
 implementation has many complected details that a native implementation
 ignores.  And if your state machine is implemented at a higher-level, that's
-still simpler than the subject under test.
+still simpler than the subject under test<sup><a href="#1" name="b1">1</a></sup>.
 
 Another way to look at this argument is how proof checking programming
 languages defend themselves. Proof checking languages receive similar push back
@@ -64,6 +63,7 @@ Doesn't that sound a bit like what [TDD][] proponents argue? That writing
 come from strongly-typed language enthusiasts as well.
 
 Generative state machine testing is a (significantly) weaker version of a proof
+
 checker. It doesn't guarantee incorrect values, only probabilistically.
 
 ## Introducing check.statem
@@ -138,3 +138,10 @@ implement at some point in the future.
 [TDD]: https://en.wikipedia.org/wiki/Test-driven_development
 [check.statem]: https://github.com/jeffh/check.statem
 [test.check]: https://github.com/clojure/test.check
+
+<ol class="footnotes">
+<li class="footnote"><a name="1"></a>The requirement to specify the behavior at a higher level makes a C-like
+   quickcheck less valuable than a QuickCheck implemented in a functional
+   language. <a href="#b1" class="back">&larrhk;</a>
+</li>
+</ol>

@@ -9,7 +9,7 @@ There's a process behind every result.
 
 If you say, "we have no process, there's no meetings", then that's your process. Admitting to no process simply indicates that you don't have it formalized. A poorly defined process hurts. Processes enable efficiency and consistency. They can also act like a communication protocol among team members, teams, and organizations. Process can improve your quality.
 
-Let's think about how you deploy an application. What does that process look like? A poorly defined deployment process is inconsistent - something undesirable for a deployment. At minimum, a quick checklist works:
+Let's think about how you deploy an application. What does that process look like? A poorly defined deployment process is inconsistent – something undesirable for a deployment. At minimum, a quick checklist works:
 
 - SSH into box
 - Copy application files to box
@@ -73,8 +73,8 @@ So what does your process look like? We know there's always one.
 
 -------------------------------------------------------------
 
-<div class="footnotes">
-<a class="footnote" id="1">1</a>: <p>See section named [The state of the "modern web" in Japan](http://www.kalzumeus.com/2014/11/07/doing-business-in-japan/).</p>
-<a class="footnote" id="2">2</a>: <p>I despise agile as a term. I'd more prefer a company that cares about its process over the commercialized "agile" process.</p>
-<a class="footnote" id="3">3</a>: <p>Although it does seem like the right direction, there's similarities with other processes. See [NUMMI](http://www.thisamericanlife.org/radio-archives/episode/403/nummi) / [TPS](https://en.wikipedia.org/wiki/Toyota_Production_System) is yet another system that has similar patterns.</p>
-</div>
+<ol class="footnotes">
+<li class="footnote" id="1">See section named <a href="http://www.kalzumeus.com/2014/11/07/doing-business-in-japan/">The state of the "modern web" in Japan</a>. <a href="#b1" class="back">&larrhk;</a></li>
+<li class="footnote" id="2">I despise agile as a term. I'd more prefer a company that cares about its process over the commercialized "agile" process. <a href="#b1" class="back">&larrhk;</a></li>
+<li class="footnote" id="3">Although it does seem like the right direction, there's similarities with other processes. See <a href="http://www.thisamericanlife.org/radio-archives/episode/403/nummi">NUMMI</a> / <a href="https://en.wikipedia.org/wiki/Toyota_Production_System">TPS</a> is yet another system that has similar patterns. <a href="#b1" class="back">&larrhk;</a></li>
+</ol>

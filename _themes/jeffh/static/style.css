@@ -3,7 +3,7 @@
 html, body {
   padding: 0;
   margin: 0;
-  background: #fbfbfb;
+  background: #fafafa;
   font-family: "Open Sans", sans-serif;
 }
 .yue {
@@ -49,7 +49,8 @@ a:hover {
 #header {
   font-size: 16px;
   padding: 20px 10px;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid #e0e0e0;
+  background: #f0f0fb;
 }
 #brand {
   float: left;
@@ -101,7 +102,7 @@ a:hover {
 .main-content {
   background: #fff;
   height: 100%;
-  border-bottom: 2px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
 }
 
 #main {
@@ -172,20 +173,27 @@ a:hover {
 }
 .entry-content blockquote {
 	margin-left: 0;
+	font-size: 1.25em;
 }
 .footnotes {
   border-top: 1px solid #ccc;
   padding: 1em 0.5em 0 0.5em;
-  line-height: 1.2em;
-  font-size: 85%;
+  line-height: 1.5em;
+  font-size: 80%;
   color: #777;
+}
+ol.footnotes {
+  margin: 0;
+}
+.footnotes :target {
+  color: #333;
+  background: #fff990;
 }
 .footnotes p {
   margin: 0 0 0.5em 1.2em;
 }
 .footnotes .footnote {
-  margin: 0;
-  float: left;
+  margin: 0 0 0 1em;
   text-decoration: none;
 }
 .footnotes .back {

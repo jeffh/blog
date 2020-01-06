@@ -45,10 +45,10 @@ An example is working in a strongly-typed language. I tend to apply typed-langua
 
 After using many languages, you become relatively ignorant of syntax. Instead, you'll be scanning for larger patterns. Become the chess master that can [recall layouts of chess positions](http://theinvisiblegorilla.com/blog/2012/02/15/how-experts-recall-chess-positions/) through higher-level patterns instead of the beginner trying to memorize the location of every piece.
 
-<div class="footnotes">
-<a class="footnote" id="1" href="#1">1:</a><p>This monthly blog posting is a mixed success. It's definitly on the trudging side of projects. <a class="back" href="#1-back">&#9166;</a></p>
-<a class="footnote" id="2" href="#2">2:</a><p>There's more than just mapping OO concepts to FP, but it's definite suprising to see how many can be mapped to functions. <a class="back" href="#2-back">&#9166;</a></p>
-</div>
+<ol class="footnotes">
+<li id="1" class="footnote">This monthly blog posting is a mixed success. It's definitely on the trudging side of projects. <a class="back" href="#1-back">&#9166;</a></li>
+<li id="2" class="footnote">There's more than just mapping OO concepts to FP, but it's definite suprising to see how many can be mapped to functions. <a class="back" href="#2-back">&#9166;</a></li>
+</ol>
 
 [1]: https://en.wikipedia.org/wiki/A*_search_algorithm
 [2]: https://en.wikipedia.org/wiki/Asteroids_(video_game)
