@@ -10,7 +10,7 @@ html, body {
   font-family: "Open Sans", sans-serif;
 }
 .yue pre {
-  font-size: 0.86em;
+  font-size: 0.80em;
 }
 
 /* extra */
@@ -43,6 +43,9 @@ a:hover {
   text-decoration:none;
   background: #323233;
   color: #fff !important;
+}
+sup a {
+	text-decoration: none;
 }
 
 /* layout */
@@ -186,6 +189,10 @@ ol.footnotes {
   margin: 0;
 }
 .footnotes :target {
+  color: #333;
+  background: #fff990;
+}
+.footnotes .footnote:target {
   color: #333;
   background: #fff990;
 }
