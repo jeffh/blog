@@ -1,6 +1,7 @@
 # check.statem: Generating Test Programs
 
 - date: 2020-1-5
+- url_postfix: .html
 
 --------------------------------
 
