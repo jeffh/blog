@@ -1,0 +1,28 @@
+{{template "base.html" .}}
+
+{{define "tab-title"}}Writings - {{end}}
+
+{{define "content"}}
+{{with .Content}}
+<section>
+	<div class="hentry"><h1 class="entry-title">Writings</h1></div>
+	{{if .PostsBySection.Sections}}
+	<div class="entry-list">
+		{{range $index, $section := .PostsBySection.Sections}}
+		{{range $section.Posts}}
+    <h3 class="entry-item-title">
+      <a href="{{url "post_list_by_year" "year" $section.Slug}}">{{$section.Slug}}</a>
+    </h3>
+    <div class="entry-item">
+        <time class="updated" datetime="{{.PubDateForAttribute}}">{{.PubDateOnlyMonthDay}}</time>
+        <a href="{{url "post_detail" "year" $section.Slug "slug" .Slug}}">{{.Title}}</a>
+    </div>
+		{{end}}
+		{{end}}
+	</div>
+	{{else}}
+	<p>Nothing here yet!</p>
+	{{end}}
+</section>
+{{end}}
+{{end}}

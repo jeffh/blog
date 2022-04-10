@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>{{block "tab-title" .}}{{end}}{{.SiteTitle}}</title>
+
+		<meta rel="alternative" type="application/rss+xml" href="/feed" title="jeffhui.net">
+		<meta name="description" content="Writings by Jeff Hui">
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans&display=swap">
+		<link rel="stylesheet" href="{{url "resource"}}yue.css">
+		<link rel="stylesheet" href="{{url "resource"}}style.css">
+		<!--[if lt IE 9]>
+			<script type="text/javascript" src="{{url "resource"}}html5shiv.js"></script>
+		<![endif]-->
+		<script>if (top !== self) top.location = self.location;</script>
+		{{block "head" .}}{{end}}
+	</head>
+	<body>
+		<header id="header">
+			<div class="container">
+				<div id="brand">
+					<a href="/" title="visit homepage">
+						<img width="30px" src="//www.gravatar.com/avatar/5b4390ee25bd6ee9d68ce76c82de100d" alt="Photo" />
+						jeffhui.net
+					</a>
+					<span id="page-title" class="show-on-scroll">{{block "page-title" .}}{{end}}</span>
+				</div>
+				<nav id="nav" role="navigation">
+					{{range .Navigation}}
+					<a href="{{.Link}}"{{if .Rel}} rel="{{.Rel}}"{{end}}>{{.Title}}</a>
+					{{end}}
+				</nav>
+			</div>
+		</header>
+		<div class="main-content">
+			<div id="main">
+				<div class="container yue">
+					{{block "content" .}}{{end}}
+				</div>
+			</div>
+		</div>
+
+		<footer id="footer">
+			<div class="end"></div>
+			<p class="copyright">&copy; {{.ThisYear}} Jeff Hui</p>
+		</footer>
+		<script type="text/javascript" src="{{url "resource"}}mobile.js"></script>
+		<script src="{{url "resource"}}app.js" async></script>
+	</body>
+</html>

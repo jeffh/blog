@@ -1,10 +1,7 @@
---------------------------------
+# check.statem: Generating Test Programs
 
-title: "check.statem: Generating Test Programs"
-date: "2020-1-5"
-author:
-  name: Jeff Hui
-url_postfix: .html
+- date: 2020-1-5
+- url_postfix: .html
 
 --------------------------------
 

@@ -1,0 +1,41 @@
+{{template "base.html" .}}
+
+{{define "tab-title"}}{{.Content.Post.Title}} - {{end}}
+
+{{define "head"}}
+<link rel="canonical" href="{{url "post_detail" "year" .Content.Section.Slug "slug" .Content.Post.Slug}}" />
+{{if .Content.Post.Summary}}<meta name="description" content="{{.Content.Post.Summary}}" />{{end}}
+{{end}}
+
+{{define "page-title"}}{{.Content.Post.Title}}{{end}}
+
+{{define "content"}}
+{{with .Content}}
+<div class="hentry">
+    <h1 class="entry-title">{{.Post.Title}}</h1>
+    <div class="entry-meta">
+			<time class="updated" datetime="{{.Post.PubDateForAttribute}}" pubdate>
+            <a href="{{url "post_list_by_year" "year" .Section.Slug}}">{{.Post.PubDateString}}</a>
+        </time>
+        <span class="author vcard">
+					{{if .Post.Author}}
+						{{if .Post.Author.Website}}
+						by <a class="url fn" href="{{.Post.Author.Website}}">{{.Post.Author.Name}}</a>
+						{{else}}
+            by <span class="fn">{{.Post.Author.Name}}</span>
+						{{end}}
+					{{end}}
+        </span>
+    </div>
+		<div class="entry-content">
+        {{.Post.HTML}}
+    </div>
+
+    <div class="entry-tags">
+			{{range .Post.Tags}}
+			<a href="#">{{.}}</a>
+			{{end}}
+    </div>
+</div>
+{{end}}
+{{end}}

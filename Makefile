@@ -12,3 +12,12 @@ deploy: clean build
 
 invalidate:
 	aws cloudfront create-invalidation --distribution-id E2B6KCHXFPTEGA --paths '/*'
+
+bin:
+	mkdir bin
+
+blog-server: bin
+	go build -o bin/blog-server cmd/blog-server/main.go
+
+blog-static: bin
+	go build -o bin/blog-static cmd/blog-static/main.go

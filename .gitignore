@@ -3,3 +3,4 @@ deploy
 .DS_Store
 .ropeproject
 drafts
+bin
