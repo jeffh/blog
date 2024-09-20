@@ -79,3 +79,6 @@ url = "https://www.jeffhui.net/index.xml"
 [module]
 [[module.imports]]
 path = "github.com/adityatelange/hugo-PaperMod"
+
+[markup.goldmark.renderHooks.image]
+enableDefault = true

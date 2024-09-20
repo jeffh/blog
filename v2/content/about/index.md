@@ -4,7 +4,7 @@ disableShare = true
 ShowReadingTime = false
 +++
 
-![Photo](/images/profile2.png)
+![Photo](profile2.png)
 
 I'm a software engineer passionate about software engineering - which is the
 never-ending challenge of balance of perfection and shipping.
