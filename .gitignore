@@ -4,3 +4,6 @@ deploy
 .ropeproject
 drafts
 bin
+v2/public
+v2/resources/_gen
+

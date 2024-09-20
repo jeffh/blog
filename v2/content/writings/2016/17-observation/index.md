@@ -27,7 +27,7 @@ in the first place. The first step to addiction is noticing (and admitting) you
 have a problem. Great designers try to solve for the sutle details of human
 interaction with the products they build.
 
-![Image from "Jiro, Dreams of Sushi"](17-observation/jiro.jpg)
+![Image from "Jiro, Dreams of Sushi"](jiro.jpg)
 
 Or another way of describing an expert: a person who has refined observation for
 a specific skill. Someone that's a jack-of-all-trades is observant at seeing
