@@ -1,19 +1,10 @@
-# Sample workflow for building and deploying a Hugo site to GitHub Pages
-name: Deploy Hugo site to Pages
+name: Deploy Hugo site to AWS
 
 on:
-  # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
 
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
@@ -76,4 +67,4 @@ jobs:
         id: deployment
         run: |
           aws s3 sync --exclude '*.DS_Store' --storage-class REDUCED_REDUNDANCY public s3://www.jeffhui.net/
-          aws cloudfront create-invalidation --distribution-id ${{vars.CLOUDFRONT_DISTRIBUTUION_ID}} --paths '/*'
+          aws cloudfront create-invalidation --distribution-id E2B6KCHXFPTEGA --paths '/*'
