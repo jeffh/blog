@@ -6,11 +6,18 @@ on:
 
   workflow_dispatch:
 
+env:
+  BUCKET_NAME: 'www.jeffhui.net'
+
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
   cancel-in-progress: false
+
+permissions:
+  id-token: write # This is required for requesting the JWT
+  contents: read  # This is required for actions/checkout
 
 # Default to bash
 defaults:
@@ -60,11 +67,11 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          role-to-assume: arn:aws:iam::441931800918:role/Github
+          role-session-name: GithubRoleSession
           aws-region: us-west-2
       - name: Deploy to AWS
         id: deployment
         run: |
-          aws s3 sync --exclude '*.DS_Store' --storage-class REDUCED_REDUNDANCY public s3://www.jeffhui.net/
+          aws s3 sync --exclude '*.DS_Store' --storage-class REDUCED_REDUNDANCY public s3://${{env.BUCKET_NAME}}/
           aws cloudfront create-invalidation --distribution-id E2B6KCHXFPTEGA --paths '/*'
