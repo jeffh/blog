@@ -50,7 +50,11 @@ imageHeight = 313
 
 [[params.profileMode.buttons]]
 name = "Writings"
-url = "/writings"
+url = "/writings/"
+
+[[params.profileMode.buttons]]
+name = "Resume"
+url = "/resume/"
 
 [[params.socialIcons]]
 name = "github"
@@ -67,6 +71,10 @@ url = "https://twitter.com/jeffhui"
 [[params.socialIcons]]
 name = "threads"
 url = "https://www.threads.net/@jeffkhui"
+
+[[params.socialIcons]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/jeff-hui/"
 
 [[params.socialIcons]]
 name = "mastodon"

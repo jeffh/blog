@@ -1,5 +1,6 @@
 +++
 title = "Hi there, I'm Jeff!"
+metaTitle = "About"
 disableShare = true
 ShowReadingTime = false
 +++
