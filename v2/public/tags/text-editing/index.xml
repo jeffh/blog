@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Text Editing on jeffhui.net</title>
+    <link>http://localhost:1313/tags/text-editing/</link>
+    <description>Recent content in Text Editing on jeffhui.net</description>
+    <generator>Hugo -- 0.134.3</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 31 Mar 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/text-editing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Editing Text (Basics)</title>
+      <link>http://localhost:1313/2016/18-editing-text-basics/</link>
+      <pubDate>Thu, 31 Mar 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/2016/18-editing-text-basics/</guid>
+      <description>&lt;h1 id=&#34;background&#34;&gt;Background&lt;/h1&gt;
+&lt;p&gt;The problem seems simple: open, edit, and save text files. This can range from
+JSON files to source code like every other editor.&lt;/p&gt;
+&lt;p&gt;Turns out, this is a relatively difficult problem. The rise of
+&lt;a href=&#34;https://atom.io&#34; title=&#34;Github Atom&#34;&gt;javascript&lt;/a&gt; &lt;a href=&#34;https://code.visualstudio.com/&#34; title=&#34;Microsoft Visual Studio Code&#34;&gt;text&lt;/a&gt; &lt;a href=&#34;http://brackets.io/&#34; title=&#34;Adobe Brackets&#34;&gt;editors&lt;/a&gt; surfaces the performance
+problem of editing large text. It&amp;rsquo;s a non-trivial problem. There are several
+desirable characteristics that editors want:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Editors need to &lt;strong&gt;optimize for edits&lt;/strong&gt;. Having immediate feedback for changes
+is paramount to text editing. This includes editing large files.&lt;/li&gt;
+&lt;li&gt;Editors need to &lt;strong&gt;optimize for reads&lt;/strong&gt;. This is implied for optimized edits so
+that users can see immediate feedback to their edit. This also includes
+support for large files.&lt;/li&gt;
+&lt;li&gt;Editors should &lt;strong&gt;minimize memory usage&lt;/strong&gt;. Reduced overhead for storage of text
+leaves more memory for more text buffers. This is useful for developers
+editing multiple projects at once (eg - microservices).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Different data structures support these requirements in varying degrees of
+success. For the sake of this article, I&amp;rsquo;m ignoring many other features editors
+usually have:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

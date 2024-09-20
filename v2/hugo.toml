@@ -1,0 +1,81 @@
+baseURL = 'https://www.jeffhui.net'
+languageCode = 'en-us'
+title = 'jeffhui.net'
+sectionPagesMenu = 'main'
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+[menus]
+[[menus.main]]
+name = 'Home'
+pageRef = '/'
+weight = 10
+
+[[menus.main]]
+name = "About"
+pageRef = "/about"
+weight = 20
+
+[[menus.main]]
+name = "Search"
+pageRef = "/search"
+weight = 30
+
+[params]
+ShowShareButtons = true
+ShowReadingTime = true
+ShowPostNavLinks = true
+ShowCodeCopyButtons = true
+
+[params.fuseOpts]
+distance = 1
+threshold = 0.8
+minMatchCharLength = 1
+
+[params.homeInfoParams]
+title = "Jeff Hui"
+subtitle = "Software Engineer · Lifelong Learner"
+imageUrl = "/images/profile.png"
+imageWidth = 626
+imageHeight = 626
+
+[params.profileMode]
+enabled = true
+title = "Jeff Hui"
+subtitle = "Software Engineer · Lifelong Learner"
+imageUrl = "/images/profile.png"
+imageWidth = 313
+imageHeight = 313
+
+[[params.profileMode.buttons]]
+name = "Writings"
+url = "/writings"
+
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/jeffh"
+
+[[params.socialIcons]]
+name = "email"
+url = "mailto:jeff@jeffhui.net"
+
+[[params.socialIcons]]
+name = "twitter"
+url = "https://twitter.com/jeffhui"
+
+[[params.socialIcons]]
+name = "threads"
+url = "https://www.threads.net/@jeffkhui"
+
+[[params.socialIcons]]
+name = "mastodon"
+url = "https://mas.to/@jeffhui"
+
+[[params.socialIcons]]
+name = "rss"
+url = "https://www.jeffhui.net/index.xml"
+
+[module]
+[[module.imports]]
+path = "github.com/adityatelange/hugo-PaperMod"

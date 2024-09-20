@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Swift on jeffhui.net</title>
+    <link>http://localhost:1313/tags/swift/</link>
+    <description>Recent content in Swift on jeffhui.net</description>
+    <generator>Hugo -- 0.134.3</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 03 May 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/swift/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Seeking Simplicity</title>
+      <link>http://localhost:1313/2015/09-seeking-simplicity.html</link>
+      <pubDate>Sun, 03 May 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/2015/09-seeking-simplicity.html</guid>
+      <description>&lt;p&gt;What is simple?&lt;/p&gt;
+&lt;p&gt;Rich Hickey makes a good abstract definition, but it can be difficult to
+translate to everyday code. I encourage you to
+&lt;a href=&#34;http://www.infoq.com/presentations/Simple-Made-Easy&#34;&gt;watch that&lt;/a&gt; before
+returning to this. I&amp;rsquo;ll still be here.&lt;/p&gt;
+&lt;p&gt;Ok, let&amp;rsquo;s start at that definition. Hickey&amp;rsquo;s simplicity is the &lt;strong&gt;disentangling
+of concerns&lt;/strong&gt;. It&amp;rsquo;s easy to convolute from what seems like straight-forward
+statement.&lt;/p&gt;
+&lt;p&gt;For example, a high-level example would be what domain-driven design proponents
+argue for. Separate solving your problem domain from the machinery that you use
+to solve it. Separate How from What or When.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

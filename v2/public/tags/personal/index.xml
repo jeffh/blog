@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Personal on jeffhui.net</title>
+    <link>http://localhost:1313/tags/personal/</link>
+    <description>Recent content in Personal on jeffhui.net</description>
+    <generator>Hugo -- 0.134.3</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 15 Apr 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/personal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Moving On</title>
+      <link>http://localhost:1313/2015/08-moving-on.html</link>
+      <pubDate>Wed, 15 Apr 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/2015/08-moving-on.html</guid>
+      <description>&lt;p&gt;It&amp;rsquo;s a bittersweet end to a chapter. I&amp;rsquo;ve thoroughly enjoyed my time at Pivotal
+Labs. I met a lot of great friends. I paired and talked with geniuses and
+newcomers alike. And I&amp;rsquo;d recommend anyone with an opportunity to work at Labs to
+take it immediately.&lt;/p&gt;
+&lt;p&gt;I look back with great memories, shared termoil, and personal growth. As an
+introvert, it was a boundary-expanded endevor: pair programming every day. I
+learned the value of tests which is evident to most of the major open source
+work I&amp;rsquo;ve contributed to. I&amp;rsquo;ve sharpened my mind by the discussions I&amp;rsquo;ve had
+there.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

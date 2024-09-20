@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Reverse Engineering on jeffhui.net</title>
+    <link>http://localhost:1313/tags/reverse-engineering/</link>
+    <description>Recent content in Reverse Engineering on jeffhui.net</description>
+    <generator>Hugo -- 0.134.3</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 26 Jul 2014 00:00:00 -0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/reverse-engineering/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reverse Engineering Objective-C</title>
+      <link>http://localhost:1313/2014/03-reverse-engineering-objective-c.html</link>
+      <pubDate>Sat, 26 Jul 2014 00:00:00 -0700</pubDate>
+      <guid>http://localhost:1313/2014/03-reverse-engineering-objective-c.html</guid>
+      <description>&lt;p&gt;Languages that have dynamic introspection provide powerful meta-programming
+capabilities. This is generally done at runtime with additional memory used for
+storing metadata - such as types and method signatures. But they also provide
+the same power for people reverse engineering your code.&lt;/p&gt;
+&lt;p&gt;Let’s look at Objective-C, a simple code snippet:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-objc&#34; data-lang=&#34;objc&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;@interface&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;MyObject&lt;/span&gt; : &lt;span style=&#34;color:#a6e22e&#34;&gt;NSObject&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;@end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;@implementation&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;MyObject&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    NSInteger _number;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;- (&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt;)&lt;span style=&#34;color:#a6e22e&#34;&gt;doSomething&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    _number&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    NSLog(&lt;span style=&#34;color:#e6db74&#34;&gt;@&amp;#34;The %@&amp;#34;&lt;/span&gt;, [self _doSomethingSpecial:_number]);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;- (NSString &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;)&lt;span style=&#34;color:#a6e22e&#34;&gt;_doSomethingSpecial:&lt;/span&gt;(NSInteger)number
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; [NSString stringWithFormat:&lt;span style=&#34;color:#e6db74&#34;&gt;@&amp;#34;Number: %d&amp;#34;&lt;/span&gt;, number];
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;@end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Simple enough, but what if we don’t have the source? Let’s step back to how
+Objective-C works…&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

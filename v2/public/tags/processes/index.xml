@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Processes on jeffhui.net</title>
+    <link>http://localhost:1313/tags/processes/</link>
+    <description>Recent content in Processes on jeffhui.net</description>
+    <generator>Hugo -- 0.134.3</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 31 Aug 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/processes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reading Code – Assertions &amp; Assumptions</title>
+      <link>http://localhost:1313/2016/23-reading-code.html</link>
+      <pubDate>Wed, 31 Aug 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/2016/23-reading-code.html</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m fascinated by how engineers read and interpret code that they work on a
+daily basis. It&amp;rsquo;s no doubt different for everyone, but few explain how they go
+about and understand a unfamiliar codebase.&lt;/p&gt;
+&lt;p&gt;For me, being comfortable in a codebase usually means two things:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Being able to jump to relevant, related parts of the code.&lt;/li&gt;
+&lt;li&gt;Understand the implications of changing a piece of code
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Inside the system&lt;/strong&gt; – impact of code quality. How does the code influence
+code in the same project?&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Outside the system&lt;/strong&gt; – implications for human and program collaborators.
+How does the code influence other projects, teams, or users?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Both can be addressed by following the data flow of the code. I refer to my
+strategy as assertions and assumptions. Take this arbitrary
+&lt;a href=&#34;https://github.com/django/django/commit/4bc6b939944183533ae74791d21282e613f63a96&#34;&gt;code snippet&lt;/a&gt;
+from &lt;a href=&#34;https://github.com/django/django&#34;&gt;Django&lt;/a&gt;:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>What&#39;s Your Engineering Culture?</title>
+      <link>http://localhost:1313/2016/22-whats-your-engineering-culture.html</link>
+      <pubDate>Sun, 31 Jul 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/2016/22-whats-your-engineering-culture.html</guid>
+      <description>&lt;p&gt;When evaluating companies, its utmostly important to learn about the engineering
+culture. Culture for a company is simular to scope for code – culture provides a
+context for getting work done.&lt;/p&gt;
+&lt;p&gt;Companies advertise their culture, but note that each company has a different
+culture. There&amp;rsquo;s plenty of articles about culture, so I won&amp;rsquo;t bother covering
+that. Just remember they aren&amp;rsquo;t necessarily the same. Companies tend not to be
+explicit about making sure their process matches what you expect. Be suspicious
+for a company that can&amp;rsquo;t explain it&amp;rsquo;s culture because that just means they&amp;rsquo;re
+not activitely trying to cultivate one. And that means it&amp;rsquo;s implicitly defined
+by the leaders of the company. Even if they choose not to define it.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Daily Processes Check-In</title>
+      <link>http://localhost:1313/2015/15-daily-processes.html</link>
+      <pubDate>Mon, 30 Nov 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/2015/15-daily-processes.html</guid>
+      <description>&lt;p&gt;&lt;em&gt;Instead of sounding prescriptive, this article is much more descriptive.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m describing my regular workflows: what is working; what isn&amp;rsquo;t working. I&amp;rsquo;m
+documenting this for completely selfish reasons since it&amp;rsquo;s useful to track
+progression (if any). It happens to be a great inflection point since a recent
+illness has thrown me off my routine in the past week.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Like most people, there&amp;rsquo;s a need to regularly do:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Respond to messages (twitter, facebook, texts)&lt;/li&gt;
+&lt;li&gt;Respond to mail (physical, email)&lt;/li&gt;
+&lt;li&gt;Attend events (birthdays, social gatherings, meetups)&lt;/li&gt;
+&lt;li&gt;Capture ideas (they tend to come up in the most random places)&lt;/li&gt;
+&lt;li&gt;Living (rent, bills, taxes, laundry, cleaning)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All while (attempting) to achieve other goals:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Process is King</title>
+      <link>http://localhost:1313/2015/13-Process-is-King.html</link>
+      <pubDate>Wed, 30 Sep 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/2015/13-Process-is-King.html</guid>
+      <description>&lt;p&gt;There&amp;rsquo;s a process behind every result.&lt;/p&gt;
+&lt;p&gt;If you say, &amp;ldquo;we have no process, there&amp;rsquo;s no meetings&amp;rdquo;, then that&amp;rsquo;s your process.
+Admitting to no process simply indicates that you don&amp;rsquo;t have it formalized. A
+poorly defined process hurts. Processes enable efficiency and consistency. They
+can also act like a communication protocol among team members, teams, and
+organizations. Process can improve your quality.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s think about how you deploy an application. What does that process look
+like? A poorly defined deployment process is inconsistent – something
+undesirable for a deployment. At minimum, a quick checklist works:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Communicating as an Engineer</title>
+      <link>http://localhost:1313/2015/12-communicating-as-an-engineer.html</link>
+      <pubDate>Mon, 31 Aug 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/2015/12-communicating-as-an-engineer.html</guid>
+      <description>&lt;p&gt;As an engineer, one of the most valuable skills you can have is to communicate
+effectively. This applies both to your follow engineers as well as non-engineers
+(PMs, designers, business). Obviously, this advice is generally applicable, but
+many engineers don&amp;rsquo;t craft their communication to the business well. Common
+problems are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Talking &lt;em&gt;too much&lt;/em&gt; about technical implementation.&lt;/li&gt;
+&lt;li&gt;Talking &lt;em&gt;too little&lt;/em&gt; about technical implementation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Too much technical implementation drowns out the important details that
+businesses are concerned about. It drags on discussions and meetings
+unnecessarily. Imagine if a designer talked for hours about how they picked the
+correct border radius value and color for their buttons in a meeting. That&amp;rsquo;s a
+waste of time for business stakeholders and engineers in that meeting. Getting
+far into the weeds like that quickly wastes discussions or
+meetings&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;1&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

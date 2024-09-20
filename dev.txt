@@ -1,0 +1,3 @@
+system
+	-brew-pkg-add hugo
+	-brew-pkg-add awscli
