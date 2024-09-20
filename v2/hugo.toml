@@ -36,7 +36,7 @@ minMatchCharLength = 1
 [params.homeInfoParams]
 title = "Jeff Hui"
 subtitle = "Software Engineer · Lifelong Learner"
-imageUrl = "/images/profile.png"
+imageUrl = "images/profile.png"
 imageWidth = 626
 imageHeight = 626
 
@@ -44,7 +44,7 @@ imageHeight = 626
 enabled = true
 title = "Jeff Hui"
 subtitle = "Software Engineer · Lifelong Learner"
-imageUrl = "/images/profile.png"
+imageUrl = "images/profile.png"
 imageWidth = 313
 imageHeight = 313
 
