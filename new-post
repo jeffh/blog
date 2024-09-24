@@ -2,8 +2,8 @@
 
 NAME=${1:-my-new-post}
 YEAR=`date "+%Y"`
-FILE="v2/content/writings/${YEAR}/${NAME}.md"
+FILE="content/writings/${YEAR}/${NAME}.md"
 hugo new content "${FILE}"
 
 echo "Created new post: ${FILE}"
-${EDITOR:-open} "${FILE}"
+cd v2 && ${EDITOR:-open} "${FILE}"
