@@ -3,7 +3,10 @@
 NAME=${1:-my-new-post}
 YEAR=`date "+%Y"`
 FILE="content/writings/${YEAR}/${NAME}.md"
+
+pushd v2
 hugo new content "${FILE}"
 
 echo "Created new post: ${FILE}"
-cd v2 && ${EDITOR:-open} "${FILE}"
+${EDITOR:-open} "${FILE}"
+popd
