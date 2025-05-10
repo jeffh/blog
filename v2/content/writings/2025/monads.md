@@ -1,7 +1,6 @@
 +++
 title = 'Monads: Are they worth it?'
 date = 2025-05-10T12:59:43-07:00
-draft = true
 +++
 
 
