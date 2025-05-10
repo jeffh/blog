@@ -4,8 +4,6 @@ date = 2025-05-10T12:59:43-07:00
 +++
 
 
-Episode 1 · Promises are Epitome
-
 Monads are interfaces for sequencing behaviors related to a data type.
 
 Monads are similar to Unix pipes. They transform input and return the same output type. While pipes describe the function, Monads describe the data type flowing through pipes.
