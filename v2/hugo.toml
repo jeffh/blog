@@ -79,6 +79,7 @@ url = "https://www.linkedin.com/in/jeff-hui/"
 [[params.socialIcons]]
 name = "mastodon"
 url = "https://mas.to/@jeffhui"
+rel = "me"
 
 [[params.socialIcons]]
 name = "rss"
