@@ -1,0 +1,28 @@
+---
+config:
+  theme: redux
+---
+graph TD
+    User -->|initiates| Command
+    User -->|views| Aggregate
+    Command -->|generates| Event[Event]
+    Event -->|appends to| Stream[Stream]
+    Stream -->|feeds| Aggregate[Aggregate]
+    Stream -->|notifies| Handler[Handler]
+    Aggregate -->|validates| Command
+    Handler -->|triggers| Action[Action]
+
+    %% Styling for clarity
+    classDef commandStyle fill:#e1f5fe
+    classDef eventStyle fill:#f3e5f5
+    classDef streamStyle fill:#e8f5e8
+    classDef aggregateStyle fill:#fff3e0
+    classDef handlerStyle fill:#fce4ec
+    classDef actionStyle fill:#f1f8e9
+
+    class Command commandStyle
+    class Event eventStyle
+    class Stream streamStyle
+    class Aggregate aggregateStyle
+    class Handler handlerStyle
+    class Action actionStyle
