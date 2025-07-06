@@ -5,7 +5,7 @@ on:
     branches: ["main"]
     paths:
       - 'v2/content/**'
-      - 'v2/layout/**'
+      - 'v2/layouts/**'
       - 'v2/static/**'
       - v2/hugo.toml
 
