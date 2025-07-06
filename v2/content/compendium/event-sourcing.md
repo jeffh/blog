@@ -1,7 +1,7 @@
 +++
 title = 'Event Sourcing'
 date = 2025-07-06T10:47:39-07:00
-tags = ['architecture', 'event-sourcing', 'ai-written']
+tags = ['architecture', 'compendium', 'event-sourcing', 'ai-written']
 +++
 
 Event Sourcing departs from traditional state-centric data management. Instead of treating the current state of entities as the primary source of truth, Event Sourcing recognizes that the sequence of changes—the events—contains richer, more complete information about what actually happened in your system.
