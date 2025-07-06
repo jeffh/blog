@@ -7,6 +7,7 @@ sectionPagesMenu = 'main'
 home = ["HTML", "RSS", "JSON"]
 
 [menus]
+
 [[menus.main]]
 name = 'Home'
 pageRef = '/'
@@ -47,10 +48,6 @@ subtitle = "Software Engineer · Lifelong Learner"
 imageUrl = "images/profile.png"
 imageWidth = 313
 imageHeight = 313
-
-[[params.profileMode.buttons]]
-name = "Writings"
-url = "/writings/"
 
 [[params.profileMode.buttons]]
 name = "Resume"

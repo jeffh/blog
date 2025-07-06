@@ -16,7 +16,7 @@ Most programming languages have product types, so ADTs are often seen as shortha
 
 Sum types are unions plus enums. They contain one of the specified underlying types:
 
-```
+```c
 // c
 union Number {
   int integer;
@@ -33,7 +33,7 @@ Note how unions allow different types to be used like an enum.
 
 Non-C programming languages typically require type checks for verification before use, whereas unions enable sharing the same memory mutation space. Programming languages with sum types usually unshackle enums from a single type:
 
-```
+```rust
 // rust
 enum Number {
   Integer(i32),
@@ -58,7 +58,7 @@ Sum types’ tradeoffs are similar to enumerations, depending on whether they ar
 
 Open enumerations anticipate future values. Go uses exclusively open enumerations:
 
-```
+```go
 // go
 type Color uint
 

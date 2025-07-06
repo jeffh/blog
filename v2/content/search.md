@@ -1,6 +1,6 @@
 +++
 title = "Search"
 layout = "search"
-summary = "search writings"
-placeholder = "Search Writings"
+summary = "search notes"
+placeholder = "Search Notes"
 +++
