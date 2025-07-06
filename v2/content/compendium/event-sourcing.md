@@ -1,7 +1,6 @@
 +++
 title = 'Event Sourcing'
 date = 2025-07-06T10:47:39-07:00
-draft = true
 tags = ['architecture', 'event-sourcing', 'ai-written']
 +++
 
