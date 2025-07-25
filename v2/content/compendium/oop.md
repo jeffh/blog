@@ -4,7 +4,7 @@ date = 2025-07-25T01:51:17-07:00
 draft = true
 +++
 
-Object Oriented Programming's ideal is around message-passing between distributed entities, and less about compile-time class hierarchies. This foundational concept has evolved into modern distributed systems architectures, from Erlang's actor model to cloud-native microservices.
+Object Oriented Programming splits into two ideas: message-passing and compile-time hierarchies. The former informs modern distributed systems and the latter is the basis of popular mmordern programming architectures.
 
 ## Lisp Origins
 
@@ -16,19 +16,19 @@ Notably, Kay later expressed regret about his terminology choice: "I'm sorry tha
 
 Aside: A fun note is the CLOS adds object-oriented programming as a library in LISP because of its powerful macro system.
 
-## The Historical Schism: Message Passing vs Modern OOP
+## Message Passing vs Modern OOP
 
 ### Message Passing OOP
 
 Kay's original concept, implemented in Smalltalk, emphasized several key principles that differ significantly from mainstream OOP:
 
-**Dynamic Message Processing**: In Message Passing OOP, everything revolves around sending messages to objects. Unlike modern method calls where you call code by name, you send data (a message) to an object and it figures out which code, if any, to execute in response. Objects could even ignore messages they didn't understand.
+**Dynamic Message Processing**: In Message Passing OOP, everything revolves around sending messages to objects. Unlike modern method calls where you call code by name, you send data (a message) to an object and it figures out which code, if any, to execute in response. Objects could even ignore messages they didn't understand. A close analog is HTTP REST APIs, but with the serialization, protocol, and mechanism of communication managed by a runtime.
 
-**Extreme Late Binding**: All decisions about object behavior were deferred until runtime. This created incredibly flexible systems where objects could change their behavior dynamically, but required more runtime overhead. It may be not be obvious shared contracts since common interfaces among objects are implied.
+**Extreme Late Binding**: All decisions about object behavior are deferred until runtime. This creates incredibly flexible systems where objects could change their behavior dynamically, but requires more runtime overhead. Late binding obscures shared contracts since common interfaces among objects are implied.
 
 **Asynchronous Communication**: Objects were designed to operate independently, communicating through asynchronous message passing rather than synchronous method calls.
 
-**Extending via Delegation**: Objects could delegate behavior to other objects by asking another object.
+**Extending via Delegation**: Objects could delegate behavior to other objects by sending messages to them.
 
 **Live System**: Objects could be updated in a live system without needing to stop and recompile the entire program. This was a departure from the static compilation model of languages like C++.
 
@@ -46,11 +46,15 @@ The C++ lineage (C++, Java, C#) evolved away from Kay's vision toward more pract
 
 **Full-Program Compilation**: Rather than updating objects in a live system, modern approaches recompile entire programs.
 
-**Extending via Inheritance**: Modern OOP languages use inheritance to extend behavior, which can lead to rigid class hierarchies and the "fragile base class" problem.
+**Extending via Inheritance**: Modern OOP languages use inheritance to extend behavior, which can lead to rigid class hierarchies and the "fragile base class" problem. Interfaces are typically a no-implmentation-copying form of inheritance.
 
 **Static System**: Modern OOP languages typically require stopping the system to update code, which is a departure from Kay's live system vision.
 
-## Actor Model: The Rediscovery of Kay's Vision
+Casey Muratori's coining of "compile-time hierarchies" as a common form of OOP architecture that is common in modern languages. He describes it as software that uses class inheritance and/or composition to define relationships between objects while hiding state. A proposed alternative is a flatter structure where state is readily accessible across the system, such as ECS / Entity-Component-System style.
+
+While compile-time hierarchies are faster than message passing within a single process, it tends to perform slower than ECS or systems that more open about data access within the program.
+
+## Actor Model: Distributed Message Passing OOP
 
 ### Erlang
 
@@ -64,6 +68,8 @@ Erlang extends massage-passing OOP principles to distributed systems:
 
 **Location Transparency**: Actors can send messages to other actors on different machines using the same syntax as local communication.
 
+**Fair Execution**: Actors have fair scheduling, ensuring that no single actor can monopolize the CPU and starve other actors.
+
 ### Virtual Actors
 
 Virtual Actors are an evolution of the Actor Model, where actors have dynamic lifetimes similar to virtual memory access: where the OS can determine when to allocate a process' memory to RAM or not depending on read/write access patterns. Virtual actors can be automatically persisted and rehydrated, allowing for a more flexible and scalable approach to distributed systems. The runtime handles the lifecycle of these actors, creating them on demand and migrating them across nodes as needed.
@@ -76,7 +82,12 @@ Microsoft Orleans introduced the Virtual Actor abstraction, where actors exist p
 
 **Transparent Distribution**: Orleans provides a virtual "actor space" that allows developers to invoke any actor in the system, whether or not it is present in memory, using indirection that maps from virtual actors to their physical instantiations.
 
-**Production Usage**: Orleans has been used by cloud services at Microsoft since 2011, starting with Halo franchise services.
+In Orleans:
+
+- Virtual Actors are called Grains. Grains can be found via unique id defined ahead of time (e.g. - email address of the user)
+- Grains are accessed through a Silo, which manages each grain's lifecycle and distribution. Unique ids of grains are by silo.
+
+Aside: Orleans is commonly use for Xbox Live multiplayer servers since it allows dynamically scaling up and down based on player activity, with actors representing game sessions, players, and other entities. It has been used in the Halo 4.
 
 #### Cloudflare Durable Objects: JavaScript Virtual Actors
 
@@ -130,12 +141,26 @@ Modern microservices architecture embodies many of Kay's original principles:
 
 # Related Topics
 
-- Alan Kay: Coined the term "object-oriented programming" and envisioned OOP as messaging between distributed entities. [1](https://www.youtube.com/watch?v=cNICGEwmXLU)
-- Smalltalk: The original implementation of Kay's vision, emphasizing dynamic message processing and extreme late binding.
+- [Alan Kay][alan kay]: Coined the term "object-oriented programming" and envisioned OOP as messaging between distributed entities. [1](https://www.youtube.com/watch?v=cNICGEwmXLU)
+- [Smalltalk][smalltalk]: The original implementation of Kay's vision, emphasizing dynamic message processing and extreme late binding.
 - C++: A language that popularized OOP toward class hierarchies and static typing instead of dynamic message passing. Along with OOP, C++ popularized strongly typed languages, compile-time polymorphism, and static type checking.
-- Erlang: A language that implemented OOP principles in a distributed context, focusing on reliability and message passing.
-- Orleans: A framework for building distributed applications using the Virtual Actor model, allowing for automatic lifecycle management and transparent distribution.
-- Cloudflare Durable Objects: A JavaScript implementation of Virtual Actors, providing global distribution and serverless storage.
-- Microservices: Modern architecture that embodies OOP principles through encapsulation, message communication, and late binding.
-- Actor Model: A conceptual model for building distributed systems where independent entities communicate through messages, closely aligned with Kay's original vision.
+- [Erlang][erlang]: A language that implemented OOP principles in a distributed context, focusing on [reliability][erlang-supervision] and [message passing][erlang-message-passing].
+- [Orleans][ms-orleans]: A framework for building distributed applications using the [Virtual Actor][virtual-actors] model, allowing for automatic lifecycle management and transparent distribution. [github](https://github.com/dotnet/orleans)
+- [Cloudflare Durable Objects][durable-objects]: A JavaScript implementation of similar to Virtual Actors, providing global distribution and serverless storage.
+- [Microservices][microservices]: Modern architecture that embodies OOP principles through encapsulation, message communication, and late binding.
+- [Actor Model][actor-model]: A conceptual model for building distributed systems where independent entities communicate through messages, closely aligned with Kay's original vision.
 - Casey Muratori's ["The Big OOPs"](https://www.youtube.com/watch?v=wo84LFzx5nI) talk has better origins. He's delinination about compile-time class heirarchies is a useful form of OOP.
+- Entity Component System (ECS): A different approach to structuring software programs where state is not hidden within objects, but rather shared across components.
+- [Proto.Actor]: is another implementation of virtual actors in .NET and Go
+
+[alan kay]: https://en.wikipedia.org/wiki/Alan_Kay
+[smalltalk]: https://en.wikipedia.org/wiki/Smalltalk
+[erlang]: https://www.erlang.org
+[erlang-supervision]: https://erlang.org/documentation/doc-4.9.1/doc/design_principles/sup_princ.html
+[erlang-message-passing]: https://www.erlang.org/blog/message-passing/
+[ms-orleans]: https://learn.microsoft.com/en-us/dotnet/orleans/overview
+[virtual-actors]: https://www.microsoft.com/en-us/research/project/orleans-virtual-actors/
+[durable-objects]: https://developers.cloudflare.com/durable-objects/what-are-durable-objects/
+[microservices]: https://martinfowler.com/articles/microservices.html
+[actor-model]: https://en.wikipedia.org/wiki/Actor_model
+[proto-actor]: https://proto.actor/
