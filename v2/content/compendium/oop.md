@@ -1,7 +1,7 @@
 +++
 title = 'Object Oriented Programming'
 date = 2025-07-24T01:51:17-07:00
-tags = ['architecture', 'compendium', 'ai-written']
+tags = ['compendium', 'ai-written']
 +++
 
 Object Oriented Programming is really two different ideas: message-passing and compile-time hierarchies. The former informs modern distributed systems and the latter is the basis of popular mmordern programming architectures.
