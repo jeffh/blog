@@ -1,10 +1,42 @@
 +++
 title = 'Object Oriented Programming'
-date = 2025-07-25T01:51:17-07:00
-draft = true
+date = 2025-07-24T01:51:17-07:00
+tags = ['architecture', 'compendium', 'ai-written']
 +++
 
-Object Oriented Programming splits into two ideas: message-passing and compile-time hierarchies. The former informs modern distributed systems and the latter is the basis of popular mmordern programming architectures.
+Object Oriented Programming is really two different ideas: message-passing and compile-time hierarchies. The former informs modern distributed systems and the latter is the basis of popular mmordern programming architectures.
+
+| Problem | Small-talk / Message Passing Lineage | Modern / Static Lineage |
+| --------- | --------------- | ------ |
+| Encourages everything to be solved with ... | message passing | classes
+| Integrating two existing pieces of code | proxy objects, dynamic dispatch | interfaces / adapter-pattern |
+| Extending code without modifying original code ... | Delegation | Inheritance |
+| Calling a method implementation is ... | Asynchronous and knowable only at runtime | Synchronous and compile-time known |
+| Iterating on Program Development by ... | Update one object at a time while preserving state, Limited type checking | Compile-time, Static type checking, Update full program by reseting state |
+
+While both are technically about objects, one focuses on using mechnanisms of messages to solve problems, while the other focuses on using classes and inheritance to solve problems.
+
+An small example would be about deferring some code to be executed later "in the background":
+
+```objc
+// objective-c: message passing style
+[object performSelector:@selector(callMethod:)
+             withObject:argument
+             afterDelay:1.0];
+```
+
+```java
+// java: modern OOP style
+timer.schedule(new TimerTask() {
+    @Override
+    public void run() {
+        object.callMethod(argument);
+    }
+}, 1000);
+```
+
+In the first class, messages are values that are passed along to a method that will do the scheduling work. In the modern style, there is a clearer structure for a type checker to know if its safe to call the method on the given object.
+
 
 ## Lisp Origins
 
@@ -50,7 +82,7 @@ The C++ lineage (C++, Java, C#) evolved away from Kay's vision toward more pract
 
 **Static System**: Modern OOP languages typically require stopping the system to update code, which is a departure from Kay's live system vision.
 
-Casey Muratori's coining of "compile-time hierarchies" as a common form of OOP architecture that is common in modern languages. He describes it as software that uses class inheritance and/or composition to define relationships between objects while hiding state. A proposed alternative is a flatter structure where state is readily accessible across the system, such as ECS / Entity-Component-System style.
+Casey Muratori's coining of ["compile-time hierarchies"][compile-time-hierarchies] as a common form of OOP architecture that is common in modern languages. He describes it as software that uses class inheritance and/or composition to define relationships between objects while hiding state. A proposed alternative is a flatter structure where state is readily accessible across the system, such as ECS / Entity-Component-System style.
 
 While compile-time hierarchies are faster than message passing within a single process, it tends to perform slower than ECS or systems that more open about data access within the program.
 
@@ -101,7 +133,7 @@ Cloudflare Durable Objects represent a JavaScript implementation of Virtual Acto
 
 Contemporary programming languages implement OOP concepts along a spectrum from message-passing to modern class-based approaches:
 
-### Objective-C: The Bridge Language
+### Objective-C
 Objective-C straddles the middle ground between message-passing and modern approaches, having evolved from more message-passing-style messaging in earlier days toward modern approaches for performance and type safety.
 
 ```objc
@@ -111,10 +143,13 @@ NSString *result = [object methodName:argument];
 [object performSelector:@selector(methodName:) withObject:argument];
 ```
 
-### JavaScript: Accidental Message-Passing
-JavaScript objects are simply composite data types with none of the implications from either class-based programming or Kay's message-passing, but they can support encapsulation, message passing, and dynamic behavior changes.
+Objective-C also uses common message-passing pattern such as:
 
-### Ruby: Message-Oriented Methods
+- Delegation ([UITableViewDelegate](https://developer.apple.com/documentation/uikit/uitableviewdelegate?language=objc) being a perfect example)
+- Proxy Objects (via `forwardingTargetForSelector:` and `NSProxy`), but was deprecated in practice due to ARC and stricter type checking of selectors.
+
+### Ruby
+
 Ruby's `method_missing` provides a mechanism closer to Kay's vision:
 
 ```ruby
@@ -147,11 +182,11 @@ Modern microservices architecture embodies many of Kay's original principles:
 - [Erlang][erlang]: A language that implemented OOP principles in a distributed context, focusing on [reliability][erlang-supervision] and [message passing][erlang-message-passing].
 - [Orleans][ms-orleans]: A framework for building distributed applications using the [Virtual Actor][virtual-actors] model, allowing for automatic lifecycle management and transparent distribution. [github](https://github.com/dotnet/orleans)
 - [Cloudflare Durable Objects][durable-objects]: A JavaScript implementation of similar to Virtual Actors, providing global distribution and serverless storage.
+- [Proto.Actor][proto-actor]: is another implementation of virtual actors in .NET and Go
 - [Microservices][microservices]: Modern architecture that embodies OOP principles through encapsulation, message communication, and late binding.
 - [Actor Model][actor-model]: A conceptual model for building distributed systems where independent entities communicate through messages, closely aligned with Kay's original vision.
-- Casey Muratori's ["The Big OOPs"](https://www.youtube.com/watch?v=wo84LFzx5nI) talk has better origins. He's delinination about compile-time class heirarchies is a useful form of OOP.
+- Casey Muratori's ["The Big OOPs"][the-big-oops] talk has better origins. He's delinination about compile-time class heirarchies is a useful form of OOP.
 - Entity Component System (ECS): A different approach to structuring software programs where state is not hidden within objects, but rather shared across components.
-- [Proto.Actor]: is another implementation of virtual actors in .NET and Go
 
 [alan kay]: https://en.wikipedia.org/wiki/Alan_Kay
 [smalltalk]: https://en.wikipedia.org/wiki/Smalltalk
@@ -164,3 +199,5 @@ Modern microservices architecture embodies many of Kay's original principles:
 [microservices]: https://martinfowler.com/articles/microservices.html
 [actor-model]: https://en.wikipedia.org/wiki/Actor_model
 [proto-actor]: https://proto.actor/
+[the-big-oops]: https://www.youtube.com/watch?v=wo84LFzx5nI
+[compile-time-hierarchies]: https://youtu.be/wo84LFzx5nI?si=WlRsWr6-ESWWcBWL&t=665
