@@ -4,15 +4,15 @@ date = 2025-07-24T01:51:17-07:00
 tags = ['compendium', 'ai-written']
 +++
 
-Object Oriented Programming is really two different ideas: message-passing and compile-time hierarchies. The former informs modern distributed systems and the latter is the basis of popular mmordern programming architectures.
+Object Oriented Programming is really two different ideas: message-passing and compile-time hierarchies. The former informs modern distributed systems and the latter is the basis of popular mordern programming architectures.
 
-| Problem | Small-talk / Message Passing Lineage | Modern / Static Lineage |
+| Problem | Small-talk / Message Passing Lineage | Modern / Compile-Time Lineage |
 | --------- | --------------- | ------ |
-| Encourages everything to be solved with ... | message passing | classes
-| Integrating two existing pieces of code | proxy objects, dynamic dispatch | interfaces / adapter-pattern |
+| Encourages everything to be solved with ... | Message passing | Classes
+| Integrating two existing pieces of code | Proxy Objects, Dynamic Dispatch | Adapters |
 | Extending code without modifying original code ... | Delegation | Inheritance |
 | Calling a method implementation is ... | Asynchronous and knowable only at runtime | Synchronous and compile-time known |
-| Iterating on Program Development by ... | Update one object at a time while preserving state, Limited type checking | Compile-time, Static type checking, Update full program by reseting state |
+| Iterating on Program Development by ... | Updating one object at a time while preserving state, Limited type checking | Compile-time, Static type checking, Update full program by reseting state |
 
 While both are technically about objects, one focuses on using mechnanisms of messages to solve problems, while the other focuses on using classes and inheritance to solve problems.
 
@@ -42,9 +42,13 @@ In the first class, messages are values that are passed along to a method that w
 
 Most developers familiar with OOP think of classes, inheritance, and encapsulation. However, the roots of object-oriented programming actually lie in the Lisp community, particularly with the Common Lisp Object System (CLOS). CLOS was inspired by earlier Lisp object systems such as MIT Flavors and CommonLoops, and differs radically from the OOP facilities found in more static languages such as C++ or Java.
 
-Alan Kay, who coined the term "object-oriented programming", was inspired by biological cells and had a vision focused on encapsulated mini-computers communicating via message passing rather than direct data sharing. His famous 2003 email clarifies this: "OOP to me means only messaging, local retention and protection and hiding of state-process, and extreme late-binding of all things".
+Alan Kay, who coined the term "object-oriented programming", was inspired by biological cells and had a vision focused on encapsulated mini-computers communicating via message passing rather than direct data sharing. His 2003 email clarifies this:
 
-Notably, Kay later expressed regret about his terminology choice: "I'm sorry that I long ago coined the term 'objects' for this topic because it gets many people to focus on the lesser idea. The big idea is messaging".
+> "OOP to me means only messaging, local retention and protection and hiding of state-process, and extreme late-binding of all things".
+
+Notably, Kay later expressed regret about his terminology choice:
+
+> "I'm sorry that I long ago coined the term 'objects' for this topic because it gets many people to focus on the lesser idea. The big idea is messaging".
 
 Aside: A fun note is the CLOS adds object-oriented programming as a library in LISP because of its powerful macro system.
 
@@ -143,10 +147,12 @@ NSString *result = [object methodName:argument];
 [object performSelector:@selector(methodName:) withObject:argument];
 ```
 
-Objective-C also uses common message-passing pattern such as:
+Objective-C allows some message-passing patterns such as:
 
 - Delegation ([UITableViewDelegate](https://developer.apple.com/documentation/uikit/uitableviewdelegate?language=objc) being a perfect example)
 - Proxy Objects (via `forwardingTargetForSelector:` and `NSProxy`), but was deprecated in practice due to ARC and stricter type checking of selectors.
+- Dynamically replacing methods using method swizzling, but method implementations are still c functions, so they still require compile step
+
 
 ### Ruby
 
