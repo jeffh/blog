@@ -93,6 +93,8 @@ Event Sourcing is often discussed alongside Command Query Responsibility Segrega
 
 While they're complementary patterns, neither requires the other. You can implement CQRS with traditional database storage, and you can implement Event Sourcing while maintaining unified read/write APIs. However, they work particularly well together because Event Sourcing naturally creates the write/read separation that CQRS formalizes in the API layer.
 
+An example of CQRS is [GraphQL](https://graphql.org/). GraphQL has separate query and mutation operations, where queries retrieve data without side effects and mutations change data. However GraphQL doesn't dictate how the data needs to be organized on the backend. GraphQL isn't event sourcing.
+
 ## When to Choose Event Sourcing
 
 Event Sourcing shines in complex business domains where the history of changes is as important as current state. Natural fits include financial systems, workflow engines, collaborative editing platforms, and audit-heavy compliance systems. The pattern is particularly valuable when you need comprehensive audit trails, complex business logic that benefits from replay testing, or diverse read patterns that benefit from specialized aggregates.
