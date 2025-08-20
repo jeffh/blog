@@ -1,7 +1,6 @@
 +++
 title = 'Algebraic Data Types: Product & Sum Types'
-date = 2025-05-10T13:22:03-07:00
-draft = true
+date = 2025-08-17T13:22:03-07:00
 +++
 
 ADTs is a fancy term for a type composed from other types. There are two kinds of Algebraic Data Types.
