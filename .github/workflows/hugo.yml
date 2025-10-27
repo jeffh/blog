@@ -53,7 +53,7 @@ jobs:
           hugo \
             --minify
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: files
           path: ./v2/public
