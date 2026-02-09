@@ -70,7 +70,7 @@ jobs:
           name: files
           path: public
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4
+        uses: aws-actions/configure-aws-credentials@v6
         with:
           role-to-assume: arn:aws:iam::441931800918:role/Github
           role-session-name: GithubRoleSession
