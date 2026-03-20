@@ -4,7 +4,7 @@ date = 2025-08-18T18:10:19-07:00
 +++
 
 
-[Datastar](https://data-star.dev/) is [HTMX](https://htmx.org/)-like framework that attempts to minimize the amount of Javascript you using a few concepts:
+[Datastar](https://data-star.dev/) is an [HTMX](https://htmx.org/)-like framework that attempts to minimize the amount of Javascript you write using a few concepts:
 
  - Use html attributes for dynamism prefixed with `data-`
  - Easy in-document updates similar to [Turbo](https://turbo.hotwired.dev/)
@@ -13,7 +13,7 @@ date = 2025-08-18T18:10:19-07:00
 
  If we compare it to other approaches, we can understand some of the tradeoffs:
 
-  - Unlike React, signals are global to a page and is expected to have less state than a full SPA. Complex UI elements are recommended to be [web components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) with Datastar.
+  - Unlike React, signals are global to a page and are expected to have less state than a full SPA. Complex UI elements are recommended to be [web components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) with Datastar.
   - Real-time updating via SSE for compression and automatic reconnects provided by the browser (instead of WebSockets which [LiveView](https://hexdocs.pm/phoenix_live_view/Phoenix.LiveView.html) uses)
   - Unlike HTMX, it uses mostly just plain Javascript so you don't have to include [hyperscript](https://hyperscript.org/), [Alpinejs](https://hyperscript.org/) or another supplementary library for more complex logic.
   - HTML content is swapped via dom morph swaps instead of innerHTML replacement by default in an attempt to better preserve the DOM state.
@@ -94,7 +94,7 @@ If you want a certain signal NOT to be sent to the server, prefix the signal's n
 
 One of the main interfaces is Datastar's HTML attributes. These are all prefixed with `data-`. The [reference](https://data-star.dev/reference/attributes) lists all the available attributes.
 
-For the most part, these attributes's value are arbitrary javascript with one specific additional syntax: `$signalName` which refers to a signal. Signals are global to the page and can be set via `data-set` or updated via `data-sse`. Signals helps Datastar dynamically rerender parts of the page if those signals change.
+For the most part, these attributes' values are arbitrary javascript with one specific additional syntax: `$signalName` which refers to a signal. Signals are global to the page and can be set via `data-set` or updated via `data-sse`. Signals help Datastar dynamically rerender parts of the page if those signals change.
 
 ## Attribute values are Javascript Expressions
 
@@ -116,7 +116,7 @@ Actions are prefixed with `@` and are used to call functionality within Datastar
 <button data-on-click="@post('/increment')">Increment Count</button>
 ```
 
-Unlike hypertext purists, actions send all signals and not form encoded elements by default. Use can pass `{contentType: 'application/x-www-form-urlencoded'}` as a secondary argument to `@post` or `@put` to send the signals as form-encoded data (assuming  the element resides in a form)
+Unlike hypertext purists, actions send all signals and not form encoded elements by default. You can pass `{contentType: 'application/x-www-form-urlencoded'}` as a secondary argument to `@post` or `@put` to send the signals as form-encoded data (assuming the element resides in a form)
 
 # Server Expectations
 
@@ -125,16 +125,16 @@ Actions that are defined within Datastar have a certain expectation of responses
  1. Return HTML with an id at the root level of the response to determine what to replace.
  2. Return JSON to patch signals.
  3. Return Javascript to execute on the client.
- 3. Return an SSE response to allow streaming of updates from server to the client.
+ 4. Return an SSE response to allow streaming of updates from server to the client.
 
-The first approach is similar to Turbo or HTMX. Let's the last is the combination of all 3 before in a realtime stream.
+The first approach is similar to Turbo or HTMX. The last is the combination of all 3 in a realtime stream.
 
  - Signals via patch (aka - merge) updates
  - Updating specific HTML elements on a page
 
-It is up to you if you want to return on SSE event in the response and close it or keep it long running for the page.
+It is up to you if you want to return one SSE event in the response and close it or keep it long running for the page.
 
-Note that with SSE, browser determine when keeping the connection alive is appropriate. Browsers typically close it while the page isn't focused and reopen it when the page is focused again. This means that:
+Note that with SSE, browsers determine when keeping the connection alive is appropriate. Browsers typically close it while the page isn't focused and reopen it when the page is focused again. This means that:
 
  - You have no control when the connection is open / closed
  - The browser manages reconnecting if the connection is lost automatically
