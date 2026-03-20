@@ -10,14 +10,14 @@ is to build upon existing concepts, but as you add more concepts you run the
 risk of being inconsistent.
 
 So with at most two sentences, I present a list of common programming concepts.
-This goes without warning that lossy compression is inevitable.
+This goes without saying that lossy compression is inevitable.
 
 - **Data**: Ones and zeros.
 - **Values**: Meaningful data.
 - **Types / Encodings**: Interpretations of values.
 - **State**: A value that changes over time. Usually also considered a Value.
 - **Variables**: Names for values over time.
-- **Collections**: A value that's a a group of values of same type.
+- **Collections**: A value that's a group of values of same type.
 - **Structs**: A value that's a group of values with possibly differing types.
 - **Classes**: Structs with functions that have itself as the first argument.
 - **Inheritance**: A concise way to implement a class by referring to part of
@@ -33,11 +33,11 @@ This goes without warning that lossy compression is inevitable.
 - **Type Classes**: Generic Interfaces.
 - **Monad**: An interface defining the expected behavior for `map`.
 - **Functor**: An interface defining the expected behavior for `apply`.
-- **Pointers**: A value that indicates where to find another value. An home
+- **Pointers**: A value that indicates where to find another value. A home
   address is a pointer to a home.
 - **Big-O Notation**: A method to estimate the number of main-memory operations
 - **Slice**: A value that is a pointer and length into an existing collection
-- **Value Objects**: An struct / class with equality and hashCode semantics.
+- **Value Objects**: A struct / class with equality and hashCode semantics.
 - **Object-Oriented Programming**: The concept of classes talking to each other
   using value objects.
 - **Procedure**: A sequence of operations to execute. Most programming languages
@@ -51,7 +51,7 @@ This goes without warning that lossy compression is inevitable.
 - **Code**: A value that is a series of operations
 - **AST (Abstract Syntax Tree)**: Hierarchy of typed code
 - **Program**: A collection of code that a computer that can execute.
-- **Compiler**: Program that take code and produce programs.
+- **Compiler**: Program that takes code and produce programs.
 - **Interpreter**: A program that executes code without producing a program.
 - **Emulator**: A program that mimics the behavior of hardware.
 - **Virtual Machine**: A computer emulator where the hardware may not actually
@@ -60,7 +60,7 @@ This goes without warning that lossy compression is inevitable.
 - **Dynamic**: Known at execution-time.
 - **Type Checker**: A program that validates what types flowing through your
   code.
-- **Type Inference**: A compiler or interpreter feature can that deduce types
+- **Type Inference**: A compiler or interpreter feature that can deduce types
   without always explicitly specifying it in code.
 - **Optimization**: Writing code for the computer first, instead of humans.
 - **Performance**: Turning memory operations for lower frequency, and higher
@@ -88,7 +88,7 @@ implications result from these definitions:
 - How would you describe a plugin?
   - How does it differ from library?
 - Is the `assert` replacement in [pytest](http://pytest.org/latest/) a macro?
-- Is Clojure a compiler or intepreter in these definitions?
+- Is Clojure a compiler or interpreter in these definitions?
   - Clojure code [always compiles](http://clojure.org/reference/evaluation) to
     bytecode before executing (eg - in a REPL)
   - Clojure code can be compiled ahead-of-time into a jar

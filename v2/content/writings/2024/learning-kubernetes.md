@@ -7,7 +7,7 @@ draft = true
 1. Deploy using Talos
    - Caveat: ip changes requires updating configuration
 2. Kubectl
-   - configurationg loading issue to make sure it loads kubectl
+   - configuration loading issue to make sure it loads kubectl
 3. Setting up tailscale
    - https://www.youtube.com/watch?v=wjDtoe-CYoI
 4. Setup 1password operator

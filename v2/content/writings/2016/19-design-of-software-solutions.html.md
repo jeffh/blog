@@ -11,8 +11,8 @@ identify their characteristics and the tradeoffs they make.
 
 ## Architect the Software After the Current Problem
 
-The easiest is way to model software. There's no need to take in consideration
-of future solutions the user made want.
+The easiest is way to model software. There's no need to take into consideration
+of future solutions the user may want.
 
 Sometimes this is what you need. If you're writing a throw-away program, the
 fastest possible way to implement it is to codify for the exact problem you're
@@ -49,7 +49,7 @@ some degree, but it lacks the ability to remove features. For example, what if
 the `Vehicle` assumed that a car needs to be powered by gasoline? Our hybrid
 vehicle becomes harder to introduce.
 
-This is same for shell scripts – most scripts will hardcode values and make
+This is the same for shell scripts – most scripts will hardcode values and make
 assumptions to its execution environment.
 
 These kinds of programs are cheaper to produce, but more expensive to change.
@@ -102,12 +102,12 @@ for mpg, miles in vehicles:
 Since the CPU fetches memory in chunks, we waste some of the memory fetch to the
 extra fields each vehicle has. This means more memory fetches. Looking at a
 [latency chart][latency chart], it's easy to imagine many of these extra fetches
-adding up to a noticable additional time.
+adding up to a noticeable additional time.
 
 No doubt performance-centric designs sacrifice hardware abstractions. Most of
 this software couples to the exact hardware it executes on: a computer chip; or
 the kind of CPU architecture. Changing to another platform may waste all the
-effort put in to turning the execution performance.
+effort put in to tuning the execution performance.
 
 These systems are also more expensive to build. They cater to the needs of the
 computer and optimize less for the readability of the programmer. A logical
@@ -123,15 +123,15 @@ the machine, it comes at the cost of future flexibility.
 
 This is harder to describe.
 
-Modeling software toward small abstractions avoids having the directly model
+Modeling software toward small abstractions avoids having to directly model
 either end. Instead, it's road less traveled. Mostly because it's a chicken-egg
-problem: a good abstraction requires a in-depth knowledge of the problem at
+problem: a good abstraction requires an in-depth knowledge of the problem at
 hand; but the best way to know the problem well is to try and solve it multiple
 times.
 
 A great example of an abstraction is how many HTTP interfaces are defined:
 [rack][rack], [wsgi][wsgi], [go/http's Handler][go-http]. They naturally provide
-the notion of middleware. Middleware can solve parts of what is needed to for an
+the notion of middleware. Middleware can solve parts of what is needed for an
 HTTP request:
 
 - Divide work up by request (eg - URI routes, HTTP method, etc.)

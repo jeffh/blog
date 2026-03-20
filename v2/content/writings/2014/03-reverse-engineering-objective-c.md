@@ -41,7 +41,7 @@ In the early days, Objective-C compiled to C. To be compatible with C, it used
 symbols that would normally be invalid for C. This explains why Objective-C uses
 @ for many of its keywords.
 
-In fact, Objective-C methods are simply c-functions. So lets look at how
+In fact, Objective-C methods are simply c-functions. So let's look at how
 `-[_doSomethingSpecial:]` would be defined in C:
 
 ```objc
@@ -79,7 +79,7 @@ Objective-C types are stripped at compile-time (properties are the exception).
 But getting the types just takes some more laborious effort. No problem, it’s
 just a bit more work to walk through it using a debugger.
 
-Of course, if you like reading assembly, you can using something like
+Of course, if you like reading assembly, you can use something like
 [Hopper](http://www.hopperapp.com) to open the binary files and read the
 implementation.
 
@@ -125,7 +125,7 @@ lldb> break set --addr 0xdeadbeef
 
 ## Combining Everything
 
-So lets have a look at the assembly in the debugger:
+So let's have a look at the assembly in the debugger:
 
 ```
 $ lldb # assuming app is already running

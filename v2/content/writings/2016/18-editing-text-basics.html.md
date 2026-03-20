@@ -59,7 +59,7 @@ Arrays have great performance for reading any character. But making changes
 
 The performance characteristics can be _shifted_ if you switch from a standard
 resizable array to a resizable [circular buffer][circular-buffer] to allow fast
-inserts on either end. But there still poor performance in most the common case
+inserts on either end. But there is still poor performance in most the common case
 of editing in the middle of the text.
 
 # Array of Strings
@@ -79,7 +79,7 @@ when reading and writing from the buffer.
 # Gap Buffer
 
 When the programming language supports direct manipulation of bytes, a common
-data structure is call the [Gap Buffer][gap-buffer]. It's simply an array with a
+data structure is called the [Gap Buffer][gap-buffer]. It's simply an array with a
 "gap" of free space that's used to allow efficient edits that are close to each
 other. The gap is moved to the desired location by shifting characters. Since
 moving the gap buffer is the most expensive, it is generally only done when an
@@ -94,7 +94,7 @@ buffer = ['a', 'b', None, None, None, 'c']
 ```
 
 The gap moves to where edits are being made. This is done by shifting the
-characters to either side of the buffer. The follow examples demonstrate how
+characters to either side of the buffer. The following examples demonstrate how
 basic operations behave.
 
 ### Moving to the Beginning

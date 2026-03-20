@@ -6,7 +6,7 @@ tags = ["Concepts", "Processes"]
 +++
 
 As an engineer, one of the most valuable skills you can have is to communicate
-effectively. This applies both to your follow engineers as well as non-engineers
+effectively. This applies both to your fellow engineers as well as non-engineers
 (PMs, designers, business). Obviously, this advice is generally applicable, but
 many engineers don't craft their communication to the business well. Common
 problems are:
@@ -31,7 +31,7 @@ being aligned what functional programming is; or why engineering should use a
 new tool. These undefined words are assumptions. And assumptions are the enemy
 of clear communication. It's assumptions that exaggerate mistakes.
 
-In comparison, hiding too much of the the technical implementation can also be
+In comparison, hiding too much of the technical implementation can also be
 detrimental. You're _denying_ the business from potentially making important
 decisions. Similar to why the
 [waterfall model](https://en.wikipedia.org/wiki/Waterfall_model) is flawed: it
@@ -73,7 +73,7 @@ preserves the data your store? How difficult is it to maintain operationally?
 if you're using Clojure and ClojureScript now. Sure it didn't seem like a
 decision the business needed to care about, but there are implications for that.
 Edn effectively locks-in your ability to move off of a Clojure stack in the
-future. While JSON is inferrior in capabilities, it keeps that option open.
+future. While JSON is inferior in capabilities, it keeps that option open.
 Alternatively, you can maintain both JSON and Edn serializations, but that
 increases your surface error to maintain. In this example, it's easy to infer
 the correct business decision, but if you're not sure, that needs to be
@@ -129,8 +129,8 @@ greater than its parts.
 <ol class="footnotes">
 <li class="footnote" id="1">A simple metric for meetings: is it worth the cost of having each person in the meeting room for the discussion for an hour? Consultants notice this more acutely than other types because of their hourly billing. It's useful, but should be more sparingly employed. <a href="#1-back" class="back">&larrhk;</a></li>
 <li class="footnote" id="2">Unless if you're a 1-person company, then only maybe. It's hard to believe if anyone has perfect technology. <a href="#2-back" class="back">&larrhk;</a></li>
-<li class="footnote" id="3">Optimization definitely has it's place, but make sure you need to pay that. If you imagine the business paying $60/hr for your time, it's it worth it for the business to improve that page load time by 10ms? <a href="#3-back" class="back">&larrhk;</a></li>
+<li class="footnote" id="3">Optimization definitely has its place, but make sure you need to pay that. If you imagine the business paying $60/hr for your time, it's it worth it for the business to improve that page load time by 10ms? <a href="#3-back" class="back">&larrhk;</a></li>
 <li class="footnote" id="4">Like optimizations, technologies are a tradeoff that should be considered. They may provide benefits as the increased risk. Can you deliver on the deadline? Can you recruit skill for this technology? What if the technology becomes abandoned? <a href="#4-back" class="back">&larrhk;</a></li>
-<li class="footnote" id="5">It's harder for a business stakeholder to be an expert at everything needed to run a business. It's easier for you to better understand the business than a stakeholder to understand technology, negotiation, manufacturing, recruiting, human resources. It doesn't hurt to try an educate them when you can though. <a href="#5-back" class="back">&larrhk;</a></li>
+<li class="footnote" id="5">It's harder for a business stakeholder to be an expert at everything needed to run a business. It's easier for you to better understand the business than a stakeholder to understand technology, negotiation, manufacturing, recruiting, human resources. It doesn't hurt to try to educate them when you can though. <a href="#5-back" class="back">&larrhk;</a></li>
 <li class="footnote" id="6">Mistakes will always happen, that's just human nature. <a href="#6-back" class="back">&larrhk;</a></li>
 </ol>

@@ -39,7 +39,7 @@ for link in links {
 }
 ```
 
-This creates a powerful abstract that separate tasks your program needs to get
+This creates a powerful abstraction that separates tasks your program needs to get
 done behind an implicit interface. The ending for loop doesn't need to know that
 those links came from multiple page fetches or the file system. If the loop
 short-circuited, then it minimizes the number of unnecessary fetches.
@@ -170,7 +170,7 @@ doesn't require walking key-value pairs and instead only lazily realizes
 values).
 
 There are tradeoffs for a relatively elegant design. You lose potential
-performance gains for using the abstaction -- like random access on your data
+performance gains for using the abstraction -- like random access on your data
 structure's elements. Also, laziness makes standard debugging techniques
 difficult. Stacktraces are less comprehensible because the execution order no
 longer reads procedurally. This is a common complaint of

@@ -52,7 +52,7 @@ Let’s look at the problem again:
 > We want to find **the number of words** that can be allowed to display.
 
 If we visualize the possible solutions, it’s just like searching through a
-sorted array items:
+sorted array of items:
 
 ```
 Number of words that fit in the given size:
@@ -60,7 +60,7 @@ Number of words that fit in the given size:
 ```
 
 The slight change we have to make from the traditional algorithm is ensure our
-algorithm remembers the number words it last seen that fits the given bound box.
+algorithm remembers the number of words it last saw that fits the given bound box.
 So if the final “item” we reach doesn’t fit, we know a fall-back that fits.
 
 ```
@@ -79,7 +79,7 @@ So if the final “item” we reach doesn’t fit, we know a fall-back that fits
 Selects 6 words.
 ```
 
-The performance improvement great because checking of the comparison fits is
+The performance improvement is great because checking of the comparison fits is
 expensive. This matches the same cost function of
 [Big-O notation](http://en.wikipedia.org/wiki/Big_O_notation), where number of
 items “visited” is measured.

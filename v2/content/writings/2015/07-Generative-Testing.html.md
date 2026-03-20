@@ -12,7 +12,7 @@ fascinated in the functional programming community. Generative testing in
 particular. It was popularized in the early 2000s by a famous implementation in
 Haskell, [QuickCheck][QuickCheck].
 
-In short, generative testing is allows you specify properties your software
+In short, generative testing allows you to specify properties your software
 should have. Then the testing library _generates_ test cases. It's an
 alternative path the functional community has taken when it comes to testing.
 This becomes evident since testing functional code becomes mostly boilerplate
@@ -77,7 +77,7 @@ common ways of writing property-based tests are:
 - **Describe an inverse relationship using multiple functions.** A good example
   of this is encoding and decoding. A property test of JSON encoding can be that
   `decode(encode(value)) == value`.
-- **Describe a relationship of the inputs to its outputs.** The concatentation
+- **Describe a relationship of the inputs to its outputs.** The concatenation
   of two arrays preserves sizes: `len(a) + len(b) == len(a + b)`.
 - **Use an existing implementation.** Use an array to test a circular buffer
   implementation. Or use an existing base64 encoder to test your new faster
@@ -86,13 +86,13 @@ common ways of writing property-based tests are:
 Generative tests shine for exploratory testing where edge cases tend to surface
 bugs. But it's not a complete replacement to a traditional test suite. An
 example-based test suite can reliably reproduce significant cases: a known
-happy-path or a previously discovered bug. Both suites compliment each other
+happy-path or a previously discovered bug. Both suites complement each other
 well.
 
 Instead of focusing on ease of writing and maintaining tests, generative testing
 focuses on discovering new bugs.
 
-An implementation of QuickCheck is also [particularly fasinating][test.check].
+An implementation of QuickCheck is also [particularly fascinating][test.check].
 It's a great example of a well-designed functional program. If you're interested
 in an implementation for Objective-C and Swift, check out [Fox][fox].
 

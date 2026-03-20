@@ -16,7 +16,7 @@ there's always time you must dedicate to learning to keep up to date.
 
 To be blunt: there's certain things you can acquire on the job - incremental
 learnings. But for significant advancements in your thought and tooling, you'll
-need to allocate a non-trival amount of time for it (hats off to you if your job
+need to allocate a non-trivial amount of time for it (hats off to you if your job
 can offer you that kind of personal investment).
 
 Learning something completely foreign requires significant time to dedicate.

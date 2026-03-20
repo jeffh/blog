@@ -78,7 +78,7 @@ The following basic types are supported for values:
 - arrays using `[]`
 - maps using `{}`
 - dates & times using [RFC3339] format without any strings (eg -
-  `2024-09-19T14:22:16-07:00`). You can provide be date only or time only
+  `2024-09-19T14:22:16-07:00`). You can provide a date only or time only
 
 Note that keys must always be strings (like JSON).
 

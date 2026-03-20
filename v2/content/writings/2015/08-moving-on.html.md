@@ -10,13 +10,13 @@ Labs. I met a lot of great friends. I paired and talked with geniuses and
 newcomers alike. And I'd recommend anyone with an opportunity to work at Labs to
 take it immediately.
 
-I look back with great memories, shared termoil, and personal growth. As an
-introvert, it was a boundary-expanded endevor: pair programming every day. I
+I look back with great memories, shared turmoil, and personal growth. As an
+introvert, it was a boundary-expanded endeavor: pair programming every day. I
 learned the value of tests which is evident to most of the major open source
 work I've contributed to. I've sharpened my mind by the discussions I've had
 there.
 
-Pivotal provided accelerated growth that I couldn't have receive from normal
+Pivotal provided accelerated growth that I couldn't have received from normal
 companies. Labs provides a unique way to learn on a wide range of skills in a
 few years:
 
@@ -37,7 +37,7 @@ Also, I learned about **the people that create software**:
 - What can make people productive.
 - Communicating well is a tough problem.
 
-I thank everyone who I have had the chance to worked with. I thank you pair for
+I thank everyone who I have had the chance to work with. I thank you pair for
 letting me type (I love it a bit too much) and experiencing how much I fail at
 pressing the right buttons too. **Please, keep in touch**.
 
@@ -45,7 +45,7 @@ But it's time to experience startup life. I'll be joining
 [Mayvenn](https://mayvenn.com/) working on Clojure full-time. The clojure
 community has been a place I have been _stealing ideas_ from since Clojure was
 first released into the world. It's a special opportunity to use this language
-in anger. It's impossible to have a perfect langauge, but it doesn't hurt to
+in anger. It's impossible to have a perfect language, but it doesn't hurt to
 expand to new forms of thought. That's for another article.
 
 As a polyglot, I'm impartial to tying any individual programming language. I've

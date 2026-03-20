@@ -116,7 +116,7 @@ It's worth remembering that most attributes are just JS expressions. For example
 
 ## `el` for current element
 
-`el` is a special variable the refers to the current element.
+`el` is a special variable that refers to the current element.
 
 ## `$` for signals
 

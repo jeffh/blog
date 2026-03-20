@@ -84,7 +84,7 @@ Open enumerations mean “more values may be added in the future, and it is impo
 
 Enum sum types are typically closed enumerations. The language enforces exhaustive checks, providing useful developer ergonomics when adding a new type to the sum type.
 
-Closed enums are better for app developers, while open enums for library writers minimizing breaking changes.
+Closed enums are better for app developers, while open enums are better for library writers minimizing breaking changes.
 
 ## Footnotes
 
