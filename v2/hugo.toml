@@ -88,3 +88,4 @@ path = "github.com/adityatelange/hugo-PaperMod"
 
 [markup.goldmark.renderHooks.image]
 enableDefault = true
+
