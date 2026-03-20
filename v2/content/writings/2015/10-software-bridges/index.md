@@ -46,7 +46,7 @@ immediately, from the environment it operates under. The feedback loop is fast -
 like building things out of Lego.
 
 Because it's so easy to build on the shoulders of the past giants, the industry
-quickly falls into becoming overmodularized and underdiciplined. It's hard to
+quickly falls into becoming overmodularized and undisciplined. It's hard to
 build interconnected components when there are many competing, incompatible
 modules. And since it's easy to course correcting along the way, the final
 result is usually inconsistent - beams of inconsistent lengths as the project
@@ -75,9 +75,9 @@ In review, there's a lot of challenges:
 - Instrumentation to identify problems.
 - Tooling for operators to use.
 - Maintain High adaptability because:
-  - it's riders always want new features (lights, new vehicles, scenery/trees,
+  - its riders always want new features (lights, new vehicles, scenery/trees,
     etc.)
-  - it's operators/owners want other changes more internal
+  - its operators/owners want other changes more internal
 
 The last bullet is the one of the main reasons software is interesting to work
 on. How do you design a system that is highly adaptable with as few different

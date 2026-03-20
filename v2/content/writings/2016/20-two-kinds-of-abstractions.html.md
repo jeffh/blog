@@ -74,7 +74,7 @@ interface PaymentProcessor {
 This kind of abstraction is usually more procedural — following an ordered
 series of method invocations.
 
-Payment interface above could possible support many implementations:
+Payment interface above could possibly support many implementations:
 
 - Stripe
 - Braintree
@@ -105,7 +105,7 @@ A well-trodden path is parsing text. There's many [talks][swift-parsers] and
 [articles][wikipedia] that demonstrate composing smaller parsers into larger
 ones. Data mapping between two similar data structures is a related problem that
 also has relatively clear composition traits. Composing a solution gives future
-flexibility to adapt to changing requirements of the problem being solve.
+flexibility to adapt to changing requirements of the problem being solved.
 
 In composable abstraction, interfaces define how each piece communicates to one
 another. An interface for composability looks less procedural, and more

@@ -12,7 +12,7 @@ is based on being away from conventional web dev for many years.
 
 ## Getting Started is Easy
 
-Having not have to build anything yourself is can be nice if you want to deliver
+Not having to build anything yourself can be nice if you want to deliver
 something quickly. This is doubly true when Svelte allows you to pull a library
 that doesn't have explicit view framework support (eg - ReactJS). Need auth? Use
 [AuthJS][authjs]. Everything is so [easy][simple is not easy].
@@ -43,9 +43,9 @@ how much effort the community puts to add types to as much as possible.
 
 [Zod][zod] is great. It's a concise validation and parsing library like
 Clojure's [Schema][clojure-schema]. [TRPC][trpc] is good for jump to definition
-and easy of having backend-only and backend/frontend endpoints.
+and ease of having backend-only and backend/frontend endpoints.
 
-[Tailwind][tailwind] is also has excellent VS Code integration.
+[Tailwind][tailwind] also has excellent VS Code integration.
 
 ## Destructuring is Nice
 
@@ -69,7 +69,7 @@ Yes, there's [superjson][superjson].
 Javascript always had two types to represent the absent of something, but
 Typescript makes it more annoying to deal with. Now you have to make sure your
 empty types line up to functions and fields you pass through. It's just an ugly
-wort of the the language.
+wart of the language.
 
 ## Security
 
@@ -88,7 +88,7 @@ you're not installing something bad. Oh and make sure you don't make any typos!
 
 Yes it's typesafe, but its common to generate large type check errors that are
 difficult to diagnose or troubleshoot. It almost reminds me of C++ template
-errors. And that's not a good thing. I've litteral spent hours debugging type
+errors. And that's not a good thing. I've literally spent hours debugging type
 errors in C++ before. I have spent 15-30 minutes trying to understand various
 type errors in typescript.
 
@@ -102,7 +102,7 @@ cause.
 ## Slow Editing Feedback Loops
 
 Randomly in [Cursor][cursor] or [VS Code][vscode] will take up to a couple of
-minutes to some trival action. It's bad:
+minutes to some trivial action. It's bad:
 
 1. Daily, I have a few files that will take 1-5 minutes to save. It's not
    consistent and just happens randomly. I'm close to saying this negates almost
@@ -110,7 +110,7 @@ minutes to some trival action. It's bad:
 1. Also, pasting code is randomly slow as well. This applies to any file type
    (including writing this blog post in markdown!). Slow pasting can take up to
    1 minute to complete, where any editing commands are buffers / frozen.
-1. Type checking is slow that I just miss type errors when editing. And since
+1. Type checking is so slow that I just miss type errors when editing. And since
    Typescript type errors are optional, I don't really notice an issue until
    later. This creates a middle ground that's worst of both worlds. I can edit
    as fast as like I do without types, but have to come back to try to

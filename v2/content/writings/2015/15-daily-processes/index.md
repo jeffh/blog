@@ -27,7 +27,7 @@ All while (attempting) to achieve other goals:
 - Personal (eg - Open Source) Projects
 - Work / Career
 - Learning
-- (Re)formation of Habbits
+- (Re)formation of Habits
 
 The problem is balancing between them all. I've been trying a series of
 techniques over the few years, but rarely checked-in and reflected. I want to
@@ -81,7 +81,7 @@ to process:
   that below.
 
 The bullet journal is about organizing tasks into monthly, daily tasks with room
-to take free-form notes. It's basic layout is as follows:
+to take free-form notes. Its basic layout is as follows:
 
 - The first few pages are an index to quickly jump to pages (which are
   numbered).
@@ -102,9 +102,9 @@ to take free-form notes. It's basic layout is as follows:
 
 ![Daily Bullet Journal](/resources/15/bullet-journal.jpg)
 
-I have been doing a subset of this that involves only a daily log entries and
+I have been doing a subset of this that involves only daily log entries and
 indexes. I'll continue to expand to more of the full bullet journal over time.
-This analog form has been a lot better than most digital forms. I use a A6
+This analog form has been a lot better than most digital forms. I use an A6
 notebook which is about the size of an iPhone 6+
 
 The main problem is that there are still too many inboxes. I haven't been great
@@ -122,13 +122,13 @@ inbox with my mailbox as the review to other's requests.
 
 ## The Change
 
-All this organizing tends to let me cut up my tasks into smaller chunks that
+All this organizing tends to let me cut up my tasks into smaller chunks than
 what's needed for large tasks. It allows me to respond consistently, but
 discourages allocating full-day tasks -- such as a CLI-only Quick
 implementation, or rewriting Fox into Swift.
 
 This severely has cut into my long-term tasks and goals. There's an ideal to
-record screencasts that has been lavishing for months. I need to fully dedicate
+record screencasts that has been languishing for months. I need to fully dedicate
 a day or two in a month to work on these tasks. Similar to other habits: daily
 exercising and avoiding nail biting.
 

@@ -369,7 +369,7 @@ example is a generic object-to-object mapper - we can build a mapper that:
 All of which builds on top of existing functionality. A perfect example is
 [Hydrant](https://github.com/jeffh/Hydrant)’s
 [ReflectiveMapper class](https://github.com/jeffh/Hydrant/blob/b9bfad919dd61f49d5b869788690dbd312a72a68/Hydrant/Public/Mappers/Facade/HYDReflectiveMapper.m#L227-286)
-(which is verbose simply because it is an immutable builder too). Most of it’s
+(which is verbose simply because it is an immutable builder too). Most of its
 functionality is achieved by composing other objects in Hydrant.
 
 ## Try it at Home

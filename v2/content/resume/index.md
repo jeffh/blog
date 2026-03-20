@@ -15,7 +15,7 @@ in [my Github profile][github]._
 ## Goals
 
 My professional goal is continuous growth and learning. This can be as broad as
-handling a financial audits. Or as narrow as using a new technology. I revel in
+handling financial audits. Or as narrow as using a new technology. I revel in
 collaborating with my peers or other roles. Communicating is not just
 enunciating one's intent, but to make sure terminology used by different
 professions are aligned.
@@ -68,7 +68,7 @@ of thousands of dollars a month in costs.
 
 It's best explained through examples:
 
- - Faciliated miscommunications between departments (e.g. marketing and
+ - Facilitated miscommunications between departments (e.g. marketing and
    finance; marketing and co-founders; etc.).
  - Handled the work related to a tax reporting & audits (reviewed by the CFO)
  - Designed and rolled out Data Privacy and Compliance initiatives (CCPA, CPRA, etc.)
@@ -84,12 +84,12 @@ It's best explained through examples:
  - Set processes up for majority of the company for remote work (because of the pandemic)
  - Onboard new C-level and VP-level hires
  - Set roadmap for Founder's desired offerings and customer messaging
- - Started & completed the entire company from LastPass to 1Password, including
+ - Migrated the entire company from LastPass to 1Password, including
    personally walking through the process with each employee to ensure a
    seamless transition.
  - Negotiating with Vendors for Data, Engineering, Product, Retail, and
    Marketing SaaS. Saving the company $50k+/year in costs on this line item
-   along.
+   alone.
  - Evaluating consulting firms.
  - Helped HR migrate to Rippling from 
 
@@ -108,7 +108,7 @@ Feb 2020 - July 2021 · 1 yr 6 mos
 
 I exchanged engineering-specific duties for more communication and cross-functional related ones:
 
- - Talked with with Investors for technical due diligence.
+ - Talked with Investors for technical due diligence.
  - Vendor search & evaluation for nearly every SaaS for the company, such as
    find POS vendors and systems for expanding into retail.
  - Mentoring other department heads (peers) with career growth.
@@ -255,20 +255,20 @@ Taken courses in: Computer Graphics, Compilers, Cryptography, Network Programmin
 
 Sep 2011 - 2013
 
-YACS is an simple course scheduler for my school, RPI. It reads from various
+YACS is a simple course scheduler for my school, RPI. It reads from various
 data sources from RPI's sites and aggregates them into a unified form. Students
 can select their courses and view possible schedules. By end of the first year,
 it was used by 80% of the student body to the point that new students were
 recommended to use it.
 
-I did majority of work. Another student did help with support (looking through
+I did the majority of work. Another student did help with support (looking through
 our school's reddit) and another helped me make flyers. Years later, it
 took RCOS a team of students to replace and build most (but not all) the
-fatures of the original. The most complicated feature was building to conflict
+features of the original. The most complicated feature was building the conflict
 detection algorithm: the site could tell you why a course time was not
 available (which one of your selections cause a conflict) as you were selecting.
 
-Noteable features:
+Notable features:
 
  - Conflict Detection
  - Calendar Export (ics)
@@ -276,7 +276,7 @@ Noteable features:
  - Showing seats available
  - Mobile-friendly (iPhone, Android, Windows Phone)
 
-There was several rewrites in the course of 4 months:
+There were several rewrites in the course of 4 months:
 
  - CoffeeScript => JavaScript
  - jQuery => Backbone => Angular + Underscore

@@ -49,15 +49,15 @@ to [surgery](http://www.who.int/patientsafety/safesurgery/checklist/en/). This
 formalization
 [reduces errors](http://www.theatlantic.com/health/archive/2014/03/save-a-brain-make-a-checklist/284438/):
 an 18% reduction in mortality in surgeries with checklists according to a
-Veterans Affairs study. Not bad for a process that's just a list actions on a
+Veterans Affairs study. Not bad for a process that's just a list of actions on a
 piece of paper.
 
 But a checklist is a straight-jacket. It's more restrictive. You'll need
-decipline to avoid the temptation to stray from the checklist. In software, the
+discipline to avoid the temptation to stray from the checklist. In software, the
 logical conclusion is to fully automate it, but we can't automate everything in
 the real world.
 
-It's important to distinguish that not every process is great a process. But
+It's important to distinguish that not every process is a great process. But
 great processes usually provide the following:
 
 - Consistency: Clear direction to achieve a goal ensuring smaller goals are met
@@ -68,14 +68,14 @@ great processes usually provide the following:
   achieve consistency.
 
 The checklist meets all three at a basic level: it's a reminder of actions to
-take to solve a larger goal; a checklist can be change while not running through
+take to solve a larger goal; a checklist can be changed while not running through
 it; and it can be given to another person to use, copy, or follow.
 
 It's interesting to see other teams' processes. NASA's space shuttle software
 [process is nearly opposite](http://www.fastcompany.com/28121/they-write-right-stuff)
 to many startups:
 
-- Psudeo-code specifications & discussions defining implementation, behavior,
+- Pseudo-code specifications & discussions defining implementation, behavior,
   and impact to code - avoids code silos
 - 9-5 work hours
 - Individual contributors focus on quality: Coders & Verifiers compete to
@@ -105,7 +105,7 @@ week to optimize every line of code for performance is a different kind of
 process that doesn't seem as sustainable or productive.
 
 Open source projects are no different. They function better with processes in
-place. What is are your guidelines to good pull requests? What is your process
+place. What are your guidelines to good pull requests? What is your process
 for cutting releases? Is there a process for
 [handling security disclosures](http://www.heavybit.com/library/video/2014-10-14-alex-gaynor)?
 Besides helping new core team members on the project, they reduce the likelihood

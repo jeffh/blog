@@ -34,7 +34,7 @@ get less code by:
 - using arbitrary memory locations for code or shared lookups.
 
 For example, `if` and `for` are two separate concepts stemming from `goto`. But
-we don't complain about how `goto`s lead to to more complex code. But `if` and
+we don't complain about how `goto`s lead to more complex code. But `if` and
 `for` aren't difficult concepts for us to grasp because we're familiar with
 concepts from past experience.
 
@@ -56,7 +56,7 @@ code empathy to understand how much each module knows about one another:
 - Do all collaborators need to know about this ordering?
 - Does a collaborator expect specific side effects?
 - Do collaborators share state?
-- Does a object know about it's collaborator's collaborators?
+- Does an object know about its collaborator's collaborators?
 
 It's a perfect example of compartmentalization are typical usages of Ruby's
 `include` for modules. It is only a method of splitting a class' code across
@@ -64,8 +64,8 @@ multiple files instead of splitting its responsibilities into separate objects.
 
 ## JavaScript
 
-Unsuprisingly, this simplicity is what makes Clojure (and other LISPs)
-compelling. LISPs are simpler than most other progamming languages.
+Unsurprisingly, this simplicity is what makes Clojure (and other LISPs)
+compelling. LISPs are simpler than most other programming languages.
 
 Let's compare by trying describe the syntax of JavaScript (without pulling in
 compiler theory). If we're explain what's the meaning of every syntactic feature
@@ -96,7 +96,7 @@ of JavaScript, it would be something like this:
   - `function foo(bar, baz...) { statements }` is a function definition.
     Definitions are implicitly above other statements within the same list of
     statements.
-  - `function(bar, baz...) { statements }` is an annoymous function
+  - `function(bar, baz...) { statements }` is an anonymous function
   - `foo.bar` is accessing the `bar` property of object `foo`
   - `foo['bar']` is accessing the `bar` property of object `foo`. Does not bind
     `this`.
@@ -133,7 +133,7 @@ a syntactic level:
 This isn't covering what's inside a standard library of JavaScript (node,
 browers, etc). Libraries are not technically part of the language itself.
 
-And JavaScript is argubly one of the easier languages to write up these rules in
+And JavaScript is arguably one of the easier languages to write up these rules in
 comparison to Python, Java, or C.
 
 Now let's look at how simple Clojure (a LISP) is in comparison:
@@ -217,13 +217,13 @@ Clojure avoids complexity common in other languages:
 Both Clojure and JavaScript are trying to solve a problem of expressing
 programs. But one seems to do it with fewer internal components.
 
-It's worth noting that Clojure could be simplier. Rich has made tradeoffs to
+It's worth noting that Clojure could be simpler. Rich has made tradeoffs to
 leverage the JVM. State management is explicit, but not simple. Even something
 as small as ordered argument parameters for functions is a tradeoff in concision
 over potential readability.
 
 But Clojure **isn't easy**. It's a departure from the C-family of languages.
-Clojure has large (Jvava) stacktraces. It's common to hear developers complain
+Clojure has large (Java) stacktraces. It's common to hear developers complain
 about the number of parentheses. But it's analogous to multi-responsibility
 classes in OO. Large objects can be an entirely separate article. Easy is
 something we can overcome. Complexity we can only paint over.

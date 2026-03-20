@@ -5,16 +5,16 @@ url = "2016/22-whats-your-engineering-culture.html"
 tags = ["Concepts", "Processes"]
 +++
 
-When evaluating companies, its utmostly important to learn about the engineering
-culture. Culture for a company is simular to scope for code – culture provides a
+When evaluating companies, it's of utmost importance to learn about the engineering
+culture. Culture for a company is similar to scope for code – culture provides a
 context for getting work done.
 
 Companies advertise their culture, but note that each company has a different
 culture. There's plenty of articles about culture, so I won't bother covering
 that. Just remember they aren't necessarily the same. Companies tend not to be
 explicit about making sure their process matches what you expect. Be suspicious
-for a company that can't explain it's culture because that just means they're
-not activitely trying to cultivate one. And that means it's implicitly defined
+for a company that can't explain its culture because that just means they're
+not actively trying to cultivate one. And that means it's implicitly defined
 by the leaders of the company. Even if they choose not to define it.
 
 ## Basics
@@ -44,11 +44,11 @@ noting that these are important for companies larger than a handful of people:
 - Are there regular **one-on-ones**? No doubt large companies have this. That's
   because one-on-one is a safer way for some employees to voice concerns. But a
   scheduled one-on-one provides a useful way to raise concerns privately without
-  having to require employees the initiate the effort.
+  having to require employees to initiate the effort.
 - Are there regular **retrospectives**? Not just the one for that outage that
   occurred yesterday, but a regular one. It's similar to a one-on-one, but for
   teams. They provide ways for a team to raise concerns. The scheduled time
-  reinfornces that this kind of feedback loop is valued.
+  reinforces that this kind of feedback loop is valued.
 - Do employees work **long hours**? It's not necessarily bad when employees work
   overtime. It could be a sign of engineers invested in the product or a
   specific time-sensitive deadline. But a common occurrence of late nights isn't
@@ -64,7 +64,7 @@ the power-users of their product.
 
 ## Growth
 
-Finally, companies can go above an beyond if they are willing in invest in your
+Finally, companies can go above and beyond if they are willing to invest in your
 continual refinement of your craft. Few companies do this. To be fair, a lot of
 it does depend on the person. It's difficult for an organization to offer this
 well.
@@ -78,9 +78,9 @@ well.
   Hackweek.
 - Does the company provide **a process for evaluating and introducing new
   technologies**? Besides just throwing employees into the deep-end, there
-  should be ways for to help explore and train with new technologies.
+  should be ways to help explore and train with new technologies.
 - How does the company **train junior developers**? Unfortunately, there isn't
-  an obvious answer to this. But is important for the company's bus-factor.
+  an obvious answer to this. But it is important for the company's bus-factor.
   Teaching a useful way to solidify knowledge for senior developers. Sadly not
   every developer will like doing this.
 

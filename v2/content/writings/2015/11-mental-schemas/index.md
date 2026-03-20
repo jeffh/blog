@@ -39,7 +39,7 @@ successful algorithms are based on neuroscience. That doesn't preclude you from
 working in your current field, but it's a way to curate ideas and techniques you
 wouldn't otherwise have.
 
-While exploring other fields is much easier to learn a breath of information.
+While exploring other fields is much easier to learn a breadth of information.
 Narrowing solidifies the knowledge already known. It's similar to starting out
 as a civil engineer before learning physics. The engineering brings practical
 experience to theory. It provides intuition to theoretical concepts. This fills
@@ -140,7 +140,7 @@ location of every piece.
 
 <ol class="footnotes">
 <li id="1" class="footnote">This monthly blog posting is a mixed success. It's definitely on the trudging side of projects. <a class="back" href="#1-back">&#9166;</a></li>
-<li id="2" class="footnote">There's more than just mapping OO concepts to FP, but it's definite suprising to see how many can be mapped to functions. <a class="back" href="#2-back">&#9166;</a></li>
+<li id="2" class="footnote">There's more than just mapping OO concepts to FP, but it's definitely surprising to see how many can be mapped to functions. <a class="back" href="#2-back">&#9166;</a></li>
 </ol>
 
 [1]: https://en.wikipedia.org/wiki/A*_search_algorithm

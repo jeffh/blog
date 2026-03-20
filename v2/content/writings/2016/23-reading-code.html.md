@@ -7,7 +7,7 @@ tags = ["Processes"]
 
 I'm fascinated by how engineers read and interpret code that they work on a
 daily basis. It's no doubt different for everyone, but few explain how they go
-about and understand a unfamiliar codebase.
+about and understand an unfamiliar codebase.
 
 For me, being comfortable in a codebase usually means two things:
 
@@ -84,7 +84,7 @@ def fields_for_model(model, fields=None, exclude=None, widgets=None,
 ```
 
 Without looking much into the other code around it, we can make (roughly) two
-kinds of interferences: assumptions and assertions in alternating fashion.
+kinds of inferences: assumptions and assertions in alternating fashion.
 
 ## 1. Assumptions
 
@@ -94,7 +94,7 @@ kinds of interferences: assumptions and assertions in alternating fashion.
   an underscore for private / protected functions as per python's coding
   conventions
   - There's also no other private or protected indicator that may indicate that
-    if the developer was for accustomed to programming in another language.
+    if the developer was more accustomed to programming in another language.
 - The function name indicates getting some fields (a collection?) given a model
   (a form model?)
 
@@ -122,7 +122,7 @@ kinds of interferences: assumptions and assertions in alternating fashion.
 - `fields` and `exclude` are probably whitelists and blacklists respectively
 - `formfield_callback` is an alternative constructor for these formfield
   instances
-- It looks like this function read's some or all of a models' fields. Models are
+- It looks like this function reads some or all of a models' fields. Models are
   from the database or elsewhere. The return value is a dictionary of field
   names to some field model.
 
@@ -140,13 +140,13 @@ random. But usually exploring a codebase is driven by a goal – usually to make
 change to the software.
 
 When I navigate _down_ into more implementation details, the goal is to
-understand how or what is being accomplish in a piece of code. This means I need
+understand how or what is being accomplished in a piece of code. This means I need
 to understand how a piece of code works, what arguments a function or class
 expects, etc.
 
-Learning context of the a given code's execution when I navigate _up_ to find
+Learning context of a given code's execution when I navigate _up_ to find
 usages of the code I was reading. This helps understand the bigger picture of
-why the some code was written and if it can make assumptions about its
+why some code was written and if it can make assumptions about its
 execution. It's only natural for a function to be implemented against the cases
 it's known to encounter.
 

@@ -5,7 +5,7 @@ tags = ["Objective-C", "Testing", "Series: Parsing JSON in Objective-C"]
 url = "2014/05-Parsing-JSON-in-Objective-C-Part-1.html"
 +++
 
-_This post was original written on the
+_This post was originally written on the
 [Pivotal Labs Blog](http://pivotallabs.com/parsing-json-in-objective-c)._
 
 JSON parsing is a frequent task for clients interfacing with any recent web API.
@@ -153,7 +153,7 @@ All done, ship it! But what about the error cases?
 
 You're probably cringing right now because there's no error handling yet:
 
-- What happens if the JSON doesn't parsed successfully?
+- What happens if the JSON doesn't parse successfully?
 - What if JSON keys don't exist?
 - Are the types of the JSON objects that we expect?
 
@@ -420,7 +420,7 @@ Finished in 0.1280 seconds
 
 The full code is the
 [tagged here](https://github.com/jeffh/ParsingJSON/tree/03-error-handling-height-key).
-So we finished our Red and Green. Now its time to…
+So we finished our Red and Green. Now it's time to…
 
 # Refactor
 

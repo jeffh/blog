@@ -6,7 +6,7 @@ tags = ["Testing", "QuickCheck"]
 +++
 
 One of the most interesting parts of generative testing (aka
-[QuickCheck][QuickCheck]). Is state machine testing. The original purpose I
+[QuickCheck][QuickCheck]) is state machine testing. The original purpose I
 built [Fox][Fox] was to explore state machine testing. In particular, the talk
 from John Hughes video was inspirational to exploring this further:
 
@@ -33,7 +33,7 @@ suite:
   case is _always_ tested.
 - Testing pure functions (arguably, normal generative testing can help too)
 
-With the most common argument against generating testing comes with the
+With the most common argument against generative testing comes with the
 complexity of writing generative tests, or more specifically:
 
 > Isn't writing a generative test equivalent to implementing the code I'm
@@ -76,7 +76,7 @@ Unfortunately, I don't do any work in Erlang, so I've been working on writing a
 state machine generator based on the papers & talks of John Hughes. It's called
 [check.statem][check.statem].
 
-It's possible to built a basic state machine, one that has little to no
+It's possible to build a basic state machine, one that has little to no
 dependencies on another transition:
 
 ```clojure
@@ -151,7 +151,7 @@ is valid operation (or breaks the constraints of the model state machine).
 
 It's still relatively new (only snapshots versions are on
 [Clojars][check.statem.clojars] right now), but I've been writing some code in
-an example project to play around an it's been enlightening from first-hand
+an example project to play around and it's been enlightening from first-hand
 experience. The kind of signal-to-noise that John mentions happens on a regular
 basis that still surprises (and delights) me: "There's no way this is the
 smallest test case."
@@ -171,7 +171,7 @@ There's some interesting personal experiences about using generative state
 machine testing that should be written up at some point.
 
 In terms of features for check.statem, the Erlang QuickCheck does have some
-really nice features when in comes to parallel testing that I would want to
+really nice features when it comes to parallel testing that I would want to
 implement at some point in the future.
 
 [QuickCheck]: https://hackage.haskell.org/package/QuickCheck

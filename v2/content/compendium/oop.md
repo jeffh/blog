@@ -4,7 +4,7 @@ date = 2025-07-24T01:51:17-07:00
 tags = ['compendium', 'ai-written']
 +++
 
-Object Oriented Programming is really two different ideas: message-passing and compile-time hierarchies. The former informs modern distributed systems and the latter is the basis of popular mordern programming architectures.
+Object Oriented Programming is really two different ideas: message-passing and compile-time hierarchies. The former informs modern distributed systems and the latter is the basis of popular modern programming architectures.
 
 | Problem | Small-talk / Message Passing Lineage | Modern / Compile-Time Lineage |
 | --------- | --------------- | ------ |
@@ -14,9 +14,9 @@ Object Oriented Programming is really two different ideas: message-passing and c
 | Calling a method implementation is ... | Asynchronous and knowable only at runtime | Synchronous and compile-time known |
 | Iterating on Program Development by ... | Updating one object at a time while preserving state, Limited type checking | Compile-time, Static type checking, Update full program by reseting state |
 
-While both are technically about objects, one focuses on using mechnanisms of messages to solve problems, while the other focuses on using classes and inheritance to solve problems.
+While both are technically about objects, one focuses on using mechanisms of messages to solve problems, while the other focuses on using classes and inheritance to solve problems.
 
-An small example would be about deferring some code to be executed later "in the background":
+A small example would be about deferring some code to be executed later "in the background":
 
 ```objc
 // objective-c: message passing style
@@ -35,7 +35,7 @@ timer.schedule(new TimerTask() {
 }, 1000);
 ```
 
-In the first class, messages are values that are passed along to a method that will do the scheduling work. In the modern style, there is a clearer structure for a type checker to know if its safe to call the method on the given object.
+In the first case, messages are values that are passed along to a method that will do the scheduling work. In the modern style, there is a clearer structure for a type checker to know if its safe to call the method on the given object.
 
 
 ## Lisp Origins
@@ -50,7 +50,7 @@ Notably, Kay later expressed regret about his terminology choice:
 
 > "I'm sorry that I long ago coined the term 'objects' for this topic because it gets many people to focus on the lesser idea. The big idea is messaging".
 
-Aside: A fun note is the CLOS adds object-oriented programming as a library in LISP because of its powerful macro system.
+Aside: A fun note is that CLOS adds object-oriented programming as a library in LISP because of its powerful macro system.
 
 ## Message Passing vs Modern OOP
 
@@ -82,7 +82,7 @@ The C++ lineage (C++, Java, C#) evolved away from Kay's vision toward more pract
 
 **Full-Program Compilation**: Rather than updating objects in a live system, modern approaches recompile entire programs.
 
-**Extending via Inheritance**: Modern OOP languages use inheritance to extend behavior, which can lead to rigid class hierarchies and the "fragile base class" problem. Interfaces are typically a no-implmentation-copying form of inheritance.
+**Extending via Inheritance**: Modern OOP languages use inheritance to extend behavior, which can lead to rigid class hierarchies and the "fragile base class" problem. Interfaces are typically a no-implementation-copying form of inheritance.
 
 **Static System**: Modern OOP languages typically require stopping the system to update code, which is a departure from Kay's live system vision.
 
@@ -96,7 +96,7 @@ While compile-time hierarchies are faster than message passing within a single p
 
 Interestingly, Erlang's creators didn't initially know about the Actor Model when they designed their language, but ended up creating something remarkably aligned with Kay's original vision. The problems Erlang was trying to solve (reliability, replication, redundancy) are the same nature was trying to solve when it evolved cells, and Alan Kay explicitly modeled OO on biological cells.
 
-Erlang extends massage-passing OOP principles to distributed systems:
+Erlang extends message-passing OOP principles to distributed systems:
 
 **Isolated Actors**: Erlang processes can only communicate via messages, with immutable boundaries preventing actors from passing mutable references or altering another actor's state.
 
@@ -123,7 +123,7 @@ In Orleans:
 - Virtual Actors are called Grains. Grains can be found via unique id defined ahead of time (e.g. - email address of the user)
 - Grains are accessed through a Silo, which manages each grain's lifecycle and distribution. Unique ids of grains are by silo.
 
-Aside: Orleans is commonly use for Xbox Live multiplayer servers since it allows dynamically scaling up and down based on player activity, with actors representing game sessions, players, and other entities. It has been used in the Halo 4.
+Aside: Orleans is commonly used for Xbox Live multiplayer servers since it allows dynamically scaling up and down based on player activity, with actors representing game sessions, players, and other entities. It has been used in the Halo 4.
 
 #### Cloudflare Durable Objects: JavaScript Virtual Actors
 
@@ -191,7 +191,7 @@ Modern microservices architecture embodies many of Kay's original principles:
 - [Proto.Actor][proto-actor]: is another implementation of virtual actors in .NET and Go
 - [Microservices][microservices]: Modern architecture that embodies OOP principles through encapsulation, message communication, and late binding.
 - [Actor Model][actor-model]: A conceptual model for building distributed systems where independent entities communicate through messages, closely aligned with Kay's original vision.
-- Casey Muratori's ["The Big OOPs"][the-big-oops] talk has better origins. He's delinination about compile-time class heirarchies is a useful form of OOP.
+- Casey Muratori's ["The Big OOPs"][the-big-oops] talk has better origins. He's delineation about compile-time class hierarchies is a useful form of OOP.
 - Entity Component System (ECS): A different approach to structuring software programs where state is not hidden within objects, but rather shared across components.
 
 [alan kay]: https://en.wikipedia.org/wiki/Alan_Kay
