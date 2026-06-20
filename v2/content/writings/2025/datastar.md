@@ -214,6 +214,7 @@ Attaches an event listener to an element. The event object is available as `evt`
 Useful modifiers for `data-on`:
 
  - `__window` — attach to the window element instead
+ - `__document` — attach to the document element instead
  - `__outside` — trigger when the event occurs outside the element
  - `__prevent` — call `preventDefault()`
  - `__stop` — call `stopPropagation()`
@@ -236,6 +237,15 @@ Runs an expression at a regular interval (default: 1 second).
 ```html
 <div data-on-interval="$count++"></div>
 <div data-on-interval__duration.5s="@get('/poll')"></div>
+```
+
+### `data-on-signal-patch`
+
+Runs an expression whenever any signals are patched (changed). The patch details are available as the `patch` variable. Pair it with `data-on-signal-patch-filter` to limit which signals trigger it, using `include`/`exclude` regex patterns.
+
+```html
+<div data-on-signal-patch="console.log('a signal changed', patch)"></div>
+<div data-on-signal-patch-filter="{include: /^counter$/}"></div>
 ```
 
 ### `data-indicator`
@@ -276,6 +286,15 @@ Creates a signal that is a reference to the DOM element.
 <div data-init="$myCanvas.getContext('2d')"></div>
 ```
 
+### `data-json-signals`
+
+Renders the current signals as live, reactive JSON. Useful for debugging. Accepts an optional filter object with `include`/`exclude` regex patterns.
+
+```html
+<pre data-json-signals></pre>
+<pre data-json-signals="{include: /user/}"></pre>
+```
+
 ### `data-ignore`
 
 Prevents Datastar from processing an element and its children. Use `__self` modifier to only ignore the element itself but still process descendants.
@@ -313,7 +332,7 @@ Actions are functions prefixed with `@` that can be called from Datastar express
 
 ## Backend Actions
 
-All HTTP actions send requests with a `Datastar-Request: true` header and include signal values. The server response must contain Datastar SSE events (or other supported content types).
+All HTTP actions send requests with a `Datastar-Request: true` header and include the page's signals automatically. For `@get`, signals are JSON-encoded into a `datastar` query parameter; for the other methods they are sent as a JSON request body. Local signals (names beginning with `_`) are excluded by default. The server response must contain Datastar SSE events (or other supported content types).
 
 ```html
 <button data-on:click="@get('/api/data')">Load</button>
@@ -336,10 +355,11 @@ Key options include:
  - `selector` — CSS selector for form element (when `contentType` is `'form'`)
  - `headers` — custom HTTP headers object
  - `openWhenHidden` — keep connection open when page is backgrounded (default: `false` for GET, `true` otherwise)
+ - `requestCancellation` — whether a new request cancels an in-flight one: `'auto'` (default), `'cleanup'`, `'disabled'`, or an `AbortController`
  - `retry` — strategy: `'auto'`, `'error'`, `'always'`, or `'never'` (default: `'auto'`)
  - `retryInterval` — wait time in ms between retries (default: `1000`)
  - `retryScaler` — multiplier for exponential backoff (default: `2`)
- - `retryMaxWaitMs` — maximum wait time between retries (default: `30000`)
+ - `retryMaxWait` — maximum wait time in ms between retries (default: `30000`)
  - `retryMaxCount` — maximum retry attempts (default: `10`)
 
 ## Signal Actions
@@ -394,7 +414,16 @@ You can control the patching behavior with additional data lines:
  - `selector` — a CSS selector to target a specific element (optional for `outer` and `replace` modes)
  - `mode` — how to patch: `outer` (default), `inner`, `replace`, `prepend`, `append`, `before`, `after`, or `remove`
  - `useViewTransition` — enable the View Transition API (`true` or `false`, defaults to `false`)
+ - `viewTransitionSelector` — a CSS selector for the element to apply the view transition to
  - `namespace` — use `svg` or `mathml` XML namespace for the elements
+
+To remove an element, use `mode remove` with a `selector` and no `elements`:
+
+```
+event: datastar-patch-elements
+data: selector #foo
+data: mode remove
+```
 
 Example with options:
 
