@@ -2,7 +2,6 @@
 title = 'Serving Datastar Streams'
 date = 2026-08-06T04:36:51-07:00
 tags = ['Datastar', 'Software Design']
-draft = true
 +++
 
 [Datastar][datastar] leaves the server-side implementation open-ended. Datastar
