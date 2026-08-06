@@ -1,0 +1,19 @@
+#!/bin/bash
+
+NAME=${1:-my-new-compendium}
+PREFIX=${2:-"compendium"}
+INCLUDE_DATE=${3:-false}
+YEAR=`date "+%Y"`
+
+if [ "$INCLUDE_DATE" = true ] ; then
+    FILE="content/${PREFIX}/${YEAR}/${NAME}.md"
+else
+    FILE="content/${PREFIX}/${NAME}.md"
+fi
+
+pushd v2
+hugo new content "${FILE}"
+
+echo "Created new post: ${FILE}"
+${EDITOR:-open} "${FILE}"
+popd
