@@ -1,6 +1,7 @@
 +++
 title = 'Serving Datastar Streams'
 date = 2026-08-06T04:36:51-07:00
+tags = ['Datastar', 'Software Design']
 draft = true
 +++
 
@@ -129,7 +130,7 @@ side, see [Datastar Basics]({{< ref "/writings/2025/datastar" >}}).)
 
 Is #5 important? It's what covers reconnects, which clients do arbitrarily.
 
-SSE connections are browser-controlled: the browser may cut the connection at any point, and reconnect at any point. So whenever a connection is established, assume a disconnect preceded it and send the latest state. Steps 3-5 repeat every time the browser reconnects.
+SSE connections are browser-controlled: the browser may cut the connection at any point, and reconnect at any point. So whenever a connection is established, assume a disconnect preceded it and send the latest state. Steps 3-5 should repeat every time the browser reconnects.
 
 A browser will typically drop an SSE connection when:
 
@@ -158,7 +159,7 @@ The traditional options for server-to-server communication all apply:
 
 Whatever writes you make should publish the entity ID or page identifier that changed. A server receiving an SSE stream request then subscribes to those entities, and gets notified when changes occur on that page.
 
-Use a modern compression for the SSE stream ([zstd][zstd], [brotli][brotli], etc.). The [Datastar SDKs][ds-sdks] typically do this for you, but remember to if you're implementing it yourself. This one change dramatically reduces the redundant data you send down the stream — including the full page updates you send because you're being lazy.
+Use a modern compression for the SSE stream ([zstd][zstd], [brotli][brotli], etc.). The [Datastar SDKs][ds-sdks] typically do this for you, but remember to if you're implementing it yourself. This one change dramatically reduces the redundant data you send down the stream — including the full page updates you send (because we're being lazy).
 
 
 # Some Other Uses for SSE Streaming
@@ -175,6 +176,10 @@ If the page doesn't need real-time streaming, the server can close the stream on
 ## Multiplayer Collaboration
 
 There is nothing more to do here! If you've implemented the design above, this already works.
+
+## Throttling
+
+Updates are controlled by the server, so any updates can be rate limited by the server.
 
 
 [datastar]: https://data-star.dev/
