@@ -1,0 +1,5 @@
+{{ define "main" }}
+<h1 class="listing__title">Not found</h1>
+<p class="listing__intro">That page doesn’t exist — it may have moved, or never did.</p>
+<a class="btn btn--accent" href="{{ "/" | relURL }}">Back home{{ partial "icon.html" "arrow-right" }}</a>
+{{ end }}

@@ -1,0 +1,106 @@
+{{ define "main" }}
+{{- $isPost := and .Section (ne .Layout "resume") }}
+{{- $section := .CurrentSection }}
+
+<article>
+  {{- if $isPost }}
+  <div class="post__back">
+    <a class="btn btn--quiet btn--sm" href="{{ $section.RelPermalink }}">{{ partial "icon.html" "arrow-left" }}{{ $section.Title }}</a>
+  </div>
+  {{- end }}
+
+  <h1 class="post__title">{{ .Title }}</h1>
+
+  {{- if not (.Param "hideMeta") }}
+  <div class="post__meta">
+    {{- if not .Date.IsZero }}
+    <span class="meta-date">{{ .Date.Format "January 2, 2006" }}</span>
+    {{- end }}
+    {{- if .Param "ShowReadingTime" }}
+    <span class="meta-read">{{ .ReadingTime }} min read</span>
+    {{- end }}
+    {{- with .GetTerms "tags" }}
+    <span class="post__tags">
+      {{- range . }}
+      <a class="tag" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+      {{- end }}
+    </span>
+    {{- end }}
+  </div>
+  {{- else }}
+  <div class="divider"></div>
+  {{- end }}
+
+  {{- if .Param "ShowToc" }}
+  {{- with .TableOfContents }}
+  <details class="toc" open>
+    <summary>Contents</summary>
+    {{ . }}
+  </details>
+  {{- end }}
+  {{- end }}
+
+  <div class="prose{{ if eq .Layout "resume" }} resume{{ end }}">
+    {{ .Content }}
+  </div>
+
+  {{- if .Params.showSocial }}
+  <div class="divider divider--44"></div>
+  <span class="eyebrow">Elsewhere</span>
+  <ul class="elsewhere">
+    {{- range partial "social_links.html" . }}
+    <li>{{ partial "icon.html" .icon }}<a href="{{ .href }}" target="_blank" rel="noreferrer{{ with .rel }} {{ . }}{{ end }}">{{ .label }}</a></li>
+    {{- end }}
+  </ul>
+  {{- end }}
+
+  {{- if $isPost }}
+  <div class="divider divider--rule"></div>
+
+  {{- if and site.Params.ShowShareButtons (ne .Params.disableShare true) }}
+  <div class="post__share">
+    <span class="eyebrow">Share</span>
+    <button type="button" class="icon-btn" data-copy-link="{{ .Permalink }}" aria-label="Copy link">{{ partial "icon.html" "link" }}</button>
+    <a class="icon-btn" href="https://twitter.com/intent/tweet?url={{ .Permalink }}&amp;text={{ .Title }}" target="_blank" rel="noreferrer" aria-label="Share on X">{{ partial "icon.html" "twitter" }}</a>
+    <a class="icon-btn" href="https://www.linkedin.com/sharing/share-offsite/?url={{ .Permalink }}" target="_blank" rel="noreferrer" aria-label="Share on LinkedIn">{{ partial "icon.html" "linkedin" }}</a>
+    <span class="copied-note" data-copied hidden>Copied</span>
+  </div>
+  {{- end }}
+
+  {{- if .Param "ShowPostNavLinks" }}
+  {{- $siblings := $section.RegularPagesRecursive.ByDate.Reverse }}
+  {{- $idx := -1 }}
+  {{- range $i, $p := $siblings }}
+    {{- if eq $p.RelPermalink $.RelPermalink }}{{ $idx = $i }}{{ end }}
+  {{- end }}
+  {{- $prev := cond (gt $idx 0) (index $siblings (sub $idx 1)) false }}
+  {{- $next := cond (and (ge $idx 0) (lt (add $idx 1) (len $siblings))) (index $siblings (add $idx 1)) false }}
+  {{- if or $prev $next }}
+  <nav class="post__nav" aria-label="More posts">
+    <div>
+      {{- with $prev }}
+      <div class="post__nav-item">
+        <span class="eyebrow">Previous</span>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </div>
+      {{- end }}
+    </div>
+    <div>
+      {{- with $next }}
+      <div class="post__nav-item post__nav-item--next">
+        <span class="eyebrow">Next</span>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </div>
+      {{- end }}
+    </div>
+  </nav>
+  {{- end }}
+  {{- end }}
+  {{- end }}
+</article>
+{{ end }}
+
+{{ define "scripts" }}
+{{- $js := resources.Get "js/copy-link.js" | resources.Minify | fingerprint }}
+<script defer src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+{{ end }}

@@ -1,0 +1,14 @@
+{{- $pages := where site.RegularPages "Type" "in" (slice "writings" "compendium") -}}
+{{- $index := slice -}}
+{{- range $pages.ByDate.Reverse -}}
+  {{- $index = $index | append (dict
+      "title" .Title
+      "url" .RelPermalink
+      "date" (.Date.Format "January 2, 2006")
+      "year" .Date.Year
+      "read" (printf "%d min" .ReadingTime)
+      "tags" (partial "tag_names.html" .)
+      "lede" (partial "lede.html" .)
+  ) -}}
+{{- end -}}
+{{- $index | jsonify -}}

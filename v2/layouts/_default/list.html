@@ -1,0 +1,41 @@
+{{ define "main" }}
+{{- $pages := .RegularPagesRecursive.ByDate.Reverse }}
+{{- $tags := slice }}
+{{- range $pages }}{{ range partial "tag_names.html" . }}{{ $tags = $tags | append . }}{{ end }}{{ end }}
+{{- $tags = $tags | uniq | sort }}
+
+<h1 class="listing__title">{{ .Title }}</h1>
+{{- with .Content }}
+<div class="listing__intro">{{ . }}</div>
+{{- end }}
+
+{{- if $tags }}
+<div class="tag-filter" data-tag-filter role="group" aria-label="Filter by tag">
+  <button type="button" class="tag is-active" data-tag="">All</button>
+  {{- range $tags }}
+  <button type="button" class="tag" data-tag="{{ . }}">{{ . }}</button>
+  {{- end }}
+</div>
+{{- end }}
+
+<div data-post-list>
+  {{- $lastYear := 0 }}
+  {{- range $pages }}
+    {{- $year := .Date.Year }}
+    {{- if ne $year $lastYear }}
+      {{- $lastYear = $year }}
+  <div class="year-head" data-year="{{ $year }}"><span class="eyebrow">{{ $year }}</span></div>
+    {{- end }}
+    {{- partial "post_row.html" . }}
+  {{- end }}
+</div>
+
+{{- if $tags }}
+<p class="listing__empty" data-empty hidden>Nothing tagged that way yet.</p>
+{{- end }}
+{{ end }}
+
+{{ define "scripts" }}
+{{- $js := resources.Get "js/tag-filter.js" | resources.Minify | fingerprint }}
+<script defer src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+{{ end }}

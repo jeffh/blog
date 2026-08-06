@@ -1,0 +1,12 @@
+{{- /* One entry in a list of notes / compendium articles. */ -}}
+{{- $tags := partial "tag_names.html" . }}
+<article class="post-row"{{ with $tags }} data-tags="{{ delimit . "|" }}"{{ end }}>
+  <div class="post-row__meta">
+    <span class="meta-date">{{ .Date.Format "January 2, 2006" }}</span>
+    <span class="meta-read">{{ .ReadingTime }} min</span>
+  </div>
+  <h3 class="post-row__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+  {{- with partial "lede.html" . }}
+  <p class="post-row__lede">{{ . }}</p>
+  {{- end }}
+</article>

@@ -1,0 +1,13 @@
+{{- /* The standfirst under a post title: an explicit description wins,
+       otherwise the article's opening paragraph. */ -}}
+{{- $text := "" -}}
+{{- with .Description -}}
+  {{- $text = . -}}
+{{- else -}}
+  {{- with index (findRE `(?s)<p>.*?</p>` .Content 1) 0 -}}
+    {{- $text = . | plainify | htmlUnescape -}}
+  {{- else -}}
+    {{- $text = .Summary | plainify | htmlUnescape -}}
+  {{- end -}}
+{{- end -}}
+{{- return (chomp ($text | truncate 200)) -}}

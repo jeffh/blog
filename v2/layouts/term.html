@@ -1,0 +1,17 @@
+{{ define "main" }}
+<span class="eyebrow">Tagged</span>
+<h1 class="listing__title">{{ .Title }}</h1>
+<p class="listing__intro">{{ len .Pages }} post{{ if ne (len .Pages) 1 }}s{{ end }}.</p>
+
+<div>
+  {{- $lastYear := 0 }}
+  {{- range .Pages.ByDate.Reverse }}
+    {{- $year := .Date.Year }}
+    {{- if ne $year $lastYear }}
+      {{- $lastYear = $year }}
+  <div class="year-head"><span class="eyebrow">{{ $year }}</span></div>
+    {{- end }}
+    {{- partial "post_row.html" . }}
+  {{- end }}
+</div>
+{{ end }}

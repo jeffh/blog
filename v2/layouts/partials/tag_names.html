@@ -1,0 +1,7 @@
+{{- /* A page's tags as normalized display names, so case variants in front
+       matter ("Javascript" vs "JavaScript") collapse to one term. */ -}}
+{{- $names := slice -}}
+{{- range .GetTerms "tags" -}}
+  {{- $names = $names | append .LinkTitle -}}
+{{- end -}}
+{{- return $names -}}

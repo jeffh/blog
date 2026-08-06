@@ -1,0 +1,24 @@
+{{- /*
+  Normalizes site.Params.socialIcons into {icon, label, href} triples so the
+  hero row and the About "Elsewhere" list stay in sync.
+  Returns a slice; callers range over it.
+*/ -}}
+{{- $map := dict
+  "github"   (dict "icon" "github"   "label" "GitHub")
+  "email"    (dict "icon" "mail"     "label" "Email")
+  "mail"     (dict "icon" "mail"     "label" "Email")
+  "twitter"  (dict "icon" "twitter"  "label" "Twitter")
+  "x"        (dict "icon" "twitter"  "label" "X")
+  "threads"  (dict "icon" "at-sign"  "label" "Threads")
+  "linkedin" (dict "icon" "linkedin" "label" "LinkedIn")
+  "mastodon" (dict "icon" "globe"    "label" "Mastodon")
+  "rss"      (dict "icon" "rss"      "label" "RSS")
+-}}
+{{- $out := slice -}}
+{{- range site.Params.socialIcons -}}
+  {{- $known := index $map (lower .name) -}}
+  {{- $icon := or .icon (and $known $known.icon) "globe" -}}
+  {{- $label := or .label (and $known $known.label) (title .name) -}}
+  {{- $out = $out | append (dict "icon" $icon "label" $label "href" .url "rel" (.rel | default "")) -}}
+{{- end -}}
+{{- return $out -}}

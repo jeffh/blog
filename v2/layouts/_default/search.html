@@ -1,0 +1,19 @@
+{{ define "main" }}
+<h1 class="listing__title" style="margin-bottom:26px">{{ .Title }}</h1>
+
+<div class="search-field">
+  {{ partial "icon.html" "search" }}
+  <input type="search" id="search-input" autocomplete="off" autocapitalize="off" spellcheck="false"
+    placeholder="{{ .Params.placeholder | default "Search notes and compendium" }}" aria-label="{{ .Title }}">
+</div>
+
+<div class="search-results" id="search-results" aria-live="polite">
+  <p class="search-hint">Type at least two characters.</p>
+</div>
+{{ end }}
+
+{{ define "scripts" }}
+{{- $js := resources.Get "js/search.js" | resources.Minify | fingerprint }}
+<script defer src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"
+  data-index="{{ "index.json" | relURL }}"></script>
+{{ end }}

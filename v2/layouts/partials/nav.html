@@ -1,0 +1,21 @@
+{{- /* Persistent top bar: wordmark + section links. */ -}}
+{{- $page := . -}}
+<header class="site-header">
+  <a class="wordmark" href="{{ "/" | relURL }}">{{ site.Title }}</a>
+  <nav class="site-nav" aria-label="Primary">
+    {{- range site.Menus.main }}
+      {{- $active := or ($page.IsMenuCurrent "main" .) ($page.HasMenuCurrent "main" .) }}
+      {{- /* Keep the section highlighted while reading one of its posts. */ -}}
+      {{- with .PageRef }}
+        {{- if and (ne . "/") (hasPrefix (printf "%s/" (trim $page.RelPermalink "/")) (printf "%s/" (trim . "/"))) }}
+          {{- $active = true }}
+        {{- end }}
+      {{- end }}
+      <a href="{{ .URL }}"{{ if $active }} class="is-active" aria-current="page"{{ end }}>{{ .Name }}</a>
+    {{- end }}
+    {{- /* Hidden until the script unhides it — the control is useless without JS. */}}
+    <button type="button" class="theme-toggle" data-theme-toggle aria-label="Switch theme" title="Switch theme" hidden>
+      {{ partial "icon.html" "moon" }}{{ partial "icon.html" "sun" }}
+    </button>
+  </nav>
+</header>
