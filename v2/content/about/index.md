@@ -3,6 +3,8 @@ title = "Hi there, I'm Jeff!"
 metaTitle = "About"
 disableShare = true
 ShowReadingTime = false
+showSocial = true
+hideMeta = true
 +++
 
 ![Photo](profile2.png)

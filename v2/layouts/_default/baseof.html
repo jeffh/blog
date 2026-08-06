@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.Lang | default "en" }}">
+<head>
+  {{- partial "head.html" . }}
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page">
+    {{- partial "nav.html" . }}
+    <main id="main">
+      {{- block "main" . }}{{ end }}
+    </main>
+    {{- partial "footer.html" . }}
+  </div>
+  {{- $theme := resources.Get "js/theme-toggle.js" | resources.Minify | fingerprint }}
+  <script defer src="{{ $theme.RelPermalink }}" integrity="{{ $theme.Data.Integrity }}"></script>
+  {{- block "scripts" . }}{{ end }}
+</body>
+</html>

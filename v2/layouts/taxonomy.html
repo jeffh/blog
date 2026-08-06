@@ -1,0 +1,10 @@
+{{ define "main" }}
+<h1 class="listing__title">{{ .Title }}</h1>
+<p class="listing__intro">Every tag used across the archive.</p>
+
+<div class="tag-filter">
+  {{- range .Pages.ByTitle }}
+  <a class="tag" href="{{ .RelPermalink }}">{{ .Title }} <span style="color:var(--ink-400)">{{ len .Pages }}</span></a>
+  {{- end }}
+</div>
+{{ end }}

@@ -1,0 +1,47 @@
+{{ define "main" }}
+{{- $notes := site.GetPage "/writings" }}
+{{- $compendium := site.GetPage "/compendium" }}
+
+<section class="hero">
+  <h1 class="hero__name">{{ site.Params.hero.title | default site.Title }}</h1>
+  {{- with site.Params.hero.subtitle }}
+  <p class="hero__title">{{ . }}</p>
+  {{- end }}
+  <div class="hero__social">
+    {{- range partial "social_links.html" . }}
+    <a href="{{ .href }}" title="{{ .label }}" aria-label="{{ .label }}" target="_blank" rel="noreferrer{{ with .rel }} {{ . }}{{ end }}">{{ partial "icon.html" .icon }}</a>
+    {{- end }}
+  </div>
+  <div class="hero__cta">
+    <a class="btn btn--accent" href="{{ "/about/" | relURL }}">More about me{{ partial "icon.html" "arrow-right" }}</a>
+  </div>
+</section>
+
+<div class="divider divider--56"></div>
+
+{{- with $notes }}
+<section>
+  <div class="section-head">
+    <span class="eyebrow">Recent notes</span>
+    <a class="btn btn--quiet btn--sm" href="{{ .RelPermalink }}">All notes{{ partial "icon.html" "arrow-right" }}</a>
+  </div>
+  {{- range first 4 .RegularPagesRecursive.ByDate.Reverse }}
+    {{- partial "post_row.html" . }}
+  {{- end }}
+</section>
+{{- end }}
+
+<div class="divider divider--40"></div>
+
+{{- with $compendium }}
+<section>
+  <span class="eyebrow">{{ .Title }}</span>
+  {{- with .Content }}
+  <div class="section-intro">{{ . | plainify | chomp }}</div>
+  {{- end }}
+  {{- range .RegularPagesRecursive.ByDate.Reverse }}
+    {{- partial "post_row.html" . }}
+  {{- end }}
+</section>
+{{- end }}
+{{ end }}
