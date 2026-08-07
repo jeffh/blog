@@ -1,6 +1,7 @@
 +++
 title = 'Datastar'
 date = 2026-08-06T12:01:35-07:00
+tags = ['architecture', 'compendium', 'Datastar']
 +++
 
 [Datastar][datastar] is an [HTMX][htmx]-like framework that attempts to minimize the amount of Javascript.
