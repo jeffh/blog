@@ -8,7 +8,7 @@ As a fun experiment, I worked on building an air defense simulation using Opus 5
 
 This wasn't a one-shot. It took a week of iterating, 117 Claude Code sessions and 102 merged PRs, but the project was short enough that I didn't worry much about the code itself. The result is far from perfect. Below is what worked well, what didn't, and what it cost.
 
-![](../airdef-images/06.png)
+![](../airdef-images/06.webp)
 
 [You can see the final result here](https://jeffh.github.io/airdef/v1/). You can see the majority of the claude code sessions to produce [it here](https://claude.ai/artifact/7VrHZbqGvD9s56V2Y9s9oU).
 
@@ -30,7 +30,7 @@ I only started with a rough idea in my head:
 
 > Build a three.js simulation of air defense of a plains with some forests on the edge. The defends are using gattling guns, homing and non-homing vehicles and radar vehicles. The aircraft being targeting are drones, airplanes and helicopters (transport and attack variants). They should be performing evasive maneuvers with flares to evade missiles. Have realistic scale of vehicle sizes and attack ranges. – [Starting Prompt](https://claude.ai/artifact/7VrHZbqGvD9s56V2Y9s9oU#s-3b3ce81f-094d-4943-a809-c3af2cc8879c)
 
-![](../airdef-images/01.png)
+![](../airdef-images/01.webp)
 
 It generated a great basis to iterate on and there was a lot of iteration. This was using Opus 5.5 high effort. It did generate programmatic models that were "sufficient" to get started. They're relatively low poly, but have enough silhouette to be recognizable.
 
@@ -41,12 +41,12 @@ Obviously we got something to start molding into shape. The second session went 
 
 I was trying to tweak the particle systems for missile exhaust, flares, and burning aircraft. Attaching promotional screenshots from Battlefield 6 was enough to improve them, but it didn't produce an exact copy. ([Session](https://claude.ai/artifact/7VrHZbqGvD9s56V2Y9s9oU#s-3303aa3a-617a-4314-b3e6-bf4a3583dced))
 
-![](../airdef-images/02-prompt.png)
+![](../airdef-images/02-prompt.webp)
 
 This pushed the particle effects towards the reference screenshots, but didn't fundamentally copy them. I'm guessing Claude downsamples images to a fairly low resolution.
 
-![](../airdef-images/02.png)
-![](../airdef-images/03.png)
+![](../airdef-images/02.webp)
+![](../airdef-images/03.webp)
 
 ## One-shot Performance Improvements
 
@@ -66,8 +66,8 @@ After setting up Meshy, a basic prompt was straightforward:
 
 It's surprisingly good at doing the work normally done by a 3D artist. It's far from perfect if the model needs animating, but for simple static models, it works well. The downside is that the models were sliced up (turrets separate from the base), so visual consistency wasn't maintained across the models. Creating a damaged model for all vehicles was painless (if not perfect).
 
-![](../airdef-images/a50.png)
-![](../airdef-images/phalanx.png)
+![](../airdef-images/a50.webp)
+![](../airdef-images/phalanx.webp)
 
 Meshy's weakest part leads to the next section...
 
@@ -86,7 +86,7 @@ Getting realistic volumetric clouds just took asking Claude to research how flig
 
 > Research how to make realistic cloud for games (prefer flight simulators, air combat sims, etc). Implement that in this game. Also look into how to make them cast realistic shadows on the ground without hurting performance significantly – [Session](https://claude.ai/artifact/7VrHZbqGvD9s56V2Y9s9oU#s-0783cf67-4366-439d-a92b-ec2f56fc7507).
 
-![](../airdef-images/clouds.png)
+![](../airdef-images/clouds.webp)
 
 ## Animated Particles
 
@@ -97,10 +97,10 @@ Three noteworthy things about animated particles:
  - Using sprite sheets for reference animation is a bit mixed. For smoke, Claude skipped the image model because it can't keep each lobe consistent from one frame to the next. It baked its own flipbook instead, rendering 3D smoke in headless Chromium. That looked great inside big clouds, but lone puffs read as "black grapes, beads or billiard balls". I moved chaff and forest-fire smoke back to the old particles.
 
 > Make explosions look like this:
-> ![](../airdef-images/05.jpg)
+> ![](../airdef-images/05.webp)
 > – [Session](https://claude.ai/artifact/7VrHZbqGvD9s56V2Y9s9oU#s-30800134-edbe-4534-b9b7-ac6be05a846e)
 
-![Explosion frames, before on the left and after on the right](../airdef-images/explosion-cmp.jpg)
+![Explosion frames, before on the left and after on the right](../airdef-images/explosion-cmp.webp)
 
 
 ## Mimic video footage
