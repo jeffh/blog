@@ -91,7 +91,7 @@
       var pop = population(L.a);
       var still = diff(L.a, L.p) === 0 || diff(L.a, L.pp) === 0; // still life or period 2
       L.stale = still ? L.stale + 1 : 0;
-      if (L.stale >= 4 || pop < 8 || L.age > 400) {
+      if (L.stale >= 4 || pop < Math.max(12, g.cols * g.rows * 0.06) || L.age > 400) {
         L.fade = 6; L.stale = 0; L.age = 0;
       }
     }
