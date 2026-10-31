@@ -443,7 +443,16 @@ button.tag { cursor: pointer; font-family: inherit; }
 /* --------------------------------------------------------------------------
    Home
    -------------------------------------------------------------------------- */
-.hero { padding: 18px 0 8px; }
+.hero { padding: 18px 0 8px; position: relative; min-height: 290px; }
+.hero__pixels {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 240px;
+  height: 240px;
+  pointer-events: auto;
+}
+.hero__pixels canvas { display: block; width: 100%; height: 100%; }
 .hero__name {
   font-family: var(--font-serif);
   font-size: var(--size-display-xl);
@@ -880,6 +889,8 @@ button.tag { cursor: pointer; font-family: inherit; }
   .site-nav { gap: 16px; }
 
   .hero__name { font-size: 44px; }
+  .hero { min-height: 0; }
+  .hero__pixels { position: static; width: 100%; height: 112px; margin-bottom: 28px; }
   .listing__title { font-size: 36px; }
   .post__title { font-size: 36px; }
 
