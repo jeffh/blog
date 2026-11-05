@@ -94,11 +94,12 @@
 
     function kick() { if (!raf && visible && !reduce.matches) raf = requestAnimationFrame(loop); }
 
-    canvas.parentElement.addEventListener("pointermove", function (e) {
+    var hit = canvas.closest(".hero") || canvas.parentElement;
+    hit.addEventListener("pointermove", function (e) {
       var r = canvas.getBoundingClientRect();
       g.pointer = { x: Math.floor((e.clientX - r.left) / cell), y: Math.floor((e.clientY - r.top) / cell), active: true };
     });
-    canvas.parentElement.addEventListener("pointerleave", function () { g.pointer.active = false; });
+    hit.addEventListener("pointerleave", function () { g.pointer.active = false; });
 
     new IntersectionObserver(function (es) { visible = es[0].isIntersecting; kick(); }).observe(canvas);
     document.addEventListener("visibilitychange", function () { visible = !document.hidden; last = performance.now(); kick(); });

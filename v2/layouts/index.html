@@ -48,19 +48,6 @@
 {{ end }}
 
 {{ define "scripts" }}
-{{- $pg := resources.Get "js/pixel-grid.js" | resources.Minify | fingerprint }}
+{{- $pg := slice (resources.Get "js/pixel-grid.js") (resources.Get "js/pixel-grid-radar.js") | resources.Concat "js/hero-radar.js" | resources.Minify | fingerprint }}
 <script defer src="{{ $pg.RelPermalink }}" integrity="{{ $pg.Data.Integrity }}"></script>
-{{- /* DRAFT: pick a variant with ?pg=01..10 while reviewing. */}}
-<script>
-(function(){
-  var V = { {{- range resources.Match "js/pixelgrid/*.js" }}{{ $r := . | resources.Minify | fingerprint }}{{ path.BaseName .Name | jsonify | safeJS }}: {{ $r.RelPermalink | jsonify | safeJS }},{{ end -}} };
-  var k = new URLSearchParams(location.search).get("pg") || "01";
-  var src = V[k] || V[Object.keys(V)[0]];
-  if (!src) return;
-  document.addEventListener("DOMContentLoaded", function(){
-    var s = document.createElement("script"); s.src = src;
-    document.body.appendChild(s);
-  });
-})();
-</script>
 {{ end }}
