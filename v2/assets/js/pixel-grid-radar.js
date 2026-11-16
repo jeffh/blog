@@ -28,11 +28,11 @@
     return d > 0 && d <= span;
   }
 
+  // new contacts appear anywhere inside the grid, drifting slowly
   function spawn(g, s) {
-    var a = g.rand() * TAU, r = s.ring * (0.6 + g.rand() * (s.rings.length - 0.6));
     var h = g.rand() * TAU, sp = 0.08 + g.rand() * 0.12;
     s.blips.push({
-      x: s.cx + Math.cos(a) * r, y: s.cy + Math.sin(a) * r,
+      x: 1 + g.rand() * Math.max(0, g.cols - 3), y: 1 + g.rand() * Math.max(0, g.rows - 3),
       vx: Math.cos(h) * sp, vy: Math.sin(h) * sp,
       ttl: 14 + g.rand() * 18, glow: 0
     });
@@ -49,14 +49,16 @@
       var rings = [];
       for (var r = ring; r < far; r += ring) rings.push(r);
       var s = g.st = { cx: cx, cy: cy, far: far + 1, ring: ring, rings: rings,
-        prev: -TAU / PERIOD / 24, blips: [], pGlow: 0 };
+        prev: null, blips: [], pGlow: 0 };
       var n = Math.max(4, Math.min(9, Math.round(g.cols * g.rows / 900)));
       s.want = n;
       for (var i = 0; i < n; i++) spawn(g, s);
     },
     step: function (g, t, dt) {
       var s = g.st, cols = g.cols, rows = g.rows, d = g.data, cx = s.cx, cy = s.cy;
-      var theta = mod2(t * TAU / PERIOD), span = mod2(theta - s.prev);
+      var theta = mod2(t * TAU / PERIOD);
+      if (s.prev === null) s.prev = theta; // first step after init/resize: nothing swept yet
+      var span = mod2(theta - s.prev);
       var c = Math.cos(theta), sn = Math.sin(theta);
       var axX = Math.round(cx), axY = Math.round(cy);
       var x, y, i, k, bl;
@@ -89,8 +91,8 @@
       for (i = 0; i < s.blips.length; i++) {
         bl = s.blips[i];
         bl.x += bl.vx * dt; bl.y += bl.vy * dt;
-        if (bl.x < 1 || bl.x > cols - 2) bl.vx = -bl.vx;
-        if (bl.y < 1 || bl.y > rows - 2) bl.vy = -bl.vy;
+        if (bl.x < 1 || bl.x > cols - 2) { bl.vx = -bl.vx; bl.x = Math.max(1, Math.min(cols - 2, bl.x)); }
+        if (bl.y < 1 || bl.y > rows - 2) { bl.vy = -bl.vy; bl.y = Math.max(1, Math.min(rows - 2, bl.y)); }
         bl.ttl -= dt;
         bl.glow = crossed(s, bl.x, bl.y, theta, span) ? 1 : Math.max(0, bl.glow - dt / PERIOD);
         if (bl.ttl > 0) keep.push(bl);

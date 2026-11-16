@@ -17,7 +17,7 @@
     var reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
     var cell = variant.cell || 8;
     var fps = variant.fps || 15;
-    var g = null, ink = "#000", dpr = 1, visible = true, raf = 0, last = 0, t0 = 0, acc = 0;
+    var g = null, ink = "#000", dpr = 1, onScreen = true, pageShown = !document.hidden, raf = 0, last = 0, t0 = 0, acc = 0;
     var seed = 1;
 
     function readColors() {
@@ -76,7 +76,7 @@
 
     function loop(now) {
       raf = 0;
-      if (!visible || reduce.matches) return;
+      if (!onScreen || !pageShown || reduce.matches) return;
       if (!t0) { t0 = now; last = now; }
       var dt = Math.min(0.25, (now - last) / 1000);
       last = now;
@@ -92,7 +92,7 @@
       raf = requestAnimationFrame(loop);
     }
 
-    function kick() { if (!raf && visible && !reduce.matches) raf = requestAnimationFrame(loop); }
+    function kick() { if (!raf && onScreen && pageShown && !reduce.matches) raf = requestAnimationFrame(loop); }
 
     var hit = canvas.closest(".hero") || canvas.parentElement;
     hit.addEventListener("pointermove", function (e) {
@@ -101,8 +101,8 @@
     });
     hit.addEventListener("pointerleave", function () { g.pointer.active = false; });
 
-    new IntersectionObserver(function (es) { visible = es[0].isIntersecting; kick(); }).observe(canvas);
-    document.addEventListener("visibilitychange", function () { visible = !document.hidden; last = performance.now(); kick(); });
+    new IntersectionObserver(function (es) { onScreen = es[0].isIntersecting; kick(); }).observe(canvas);
+    document.addEventListener("visibilitychange", function () { pageShown = !document.hidden; last = performance.now(); kick(); });
     new ResizeObserver(function () { resize(); }).observe(canvas);
     new MutationObserver(function () { readColors(); draw(); })
       .observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
