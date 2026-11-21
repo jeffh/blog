@@ -3,6 +3,7 @@
 {{- $compendium := site.GetPage "/compendium" }}
 
 <section class="hero">
+  <div class="hero__pixels" aria-hidden="true"><canvas></canvas></div>
   <h1 class="hero__name">{{ site.Params.hero.title | default site.Title }}</h1>
   {{- with site.Params.hero.subtitle }}
   <p class="hero__title">{{ . }}</p>
@@ -44,4 +45,9 @@
   {{- end }}
 </section>
 {{- end }}
+{{ end }}
+
+{{ define "scripts" }}
+{{- $pg := slice (resources.Get "js/pixel-grid.js") (resources.Get "js/pixel-grid-radar.js") | resources.Concat "js/hero-radar.js" | resources.Minify | fingerprint }}
+<script defer src="{{ $pg.RelPermalink }}" integrity="{{ $pg.Data.Integrity }}"></script>
 {{ end }}
